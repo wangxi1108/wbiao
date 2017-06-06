@@ -25,6 +25,10 @@
 1. **④**安装html压缩插件 $ cnpm install gulp-htmlmin --save-dev
 1. **⑤**安装监听插件 $ cnpm install gulp-watch --save-dev 
 1. **⑥**安装浏览器自动刷新 $ cnpm install gulp-livereload --save-dev
+1. 配置gulpfile文件，实现自动化构建
+1. 安装http-server服务器，$ cnpm install http-server -g
+1. 在项目文件夹下运行 $ http-server
+1. 浏览器地址输入https：//127.0.0.1:8080 
 1. 安装jQuery $ cnpm install jquery
  
 

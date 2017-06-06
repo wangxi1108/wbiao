@@ -8,7 +8,7 @@
 - sass/less
 - jQuery
 #### 步骤：
-#####项目创建
+##### 项目创建
 
 1. 新建项目文件夹 $ mkdir project
 1. 进入项目文件夹 $ cd project
@@ -18,7 +18,7 @@
 1. 安装cnpm $ cnpm install
 1. 生成package.json文件 $ cnpm init
 
-#####dir-list(*星标文件在.gitignore内):
+##### dir-list(*星标文件在.gitignore内):
 - .git
 - ***node_modules**
 - .gitignore

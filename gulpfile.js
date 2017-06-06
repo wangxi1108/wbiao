@@ -9,8 +9,8 @@ var gulp = require('gulp'),
 	livereload = require('gulp-livereload');
 
 /*less->css,css->cssmin*/
-gulp.task('Less', function () {
-    gulp.src('src/less/.less')//less文件源路径
+gulp.task('less', function () {
+    gulp.src('src/less/*.less')//less文件源路径
         .pipe(less())//运行less->css
         .pipe(gulp.dest('src/css'))
         .pipe(cssmin())//运行css->cssmin
@@ -25,7 +25,7 @@ gulp.task('Less', function () {
 /*js->jsmin*/
 gulp.task('jsmin', function (cb) {
   return gulp.src('src/js/*.js')//js文件源路径
-    .pipe(uglify())//js->jsmin
+    .pipe(jsmin())//js->jsmin
     .pipe(gulp.dest('dist/js'));//生成压缩文件路径
 });
 /*html->htmlmin*/
@@ -47,9 +47,13 @@ gulp.task('htmlmin', function () {
 
 /*添加监听*/
 gulp.task('watch', function () {
-	livereload.listen();
-	gulp.watch('src/html/*.html', ['htmlmin']);//当所有html文件夹中.html文件发生改变时，调用htmlmin任务
-	gulp.watch('src/js/*.js', ['jsmin']);//当所有js文件夹中.js文件发生改变时，调用jsmin任务
-    gulp.watch('src/less/*.less', ['less']); //当所有less文件夹中.less文件发生改变时，调用less任务
+    livereload.listen();
+	// gulp.watch('src/html/*.html', ['htmlmin']);//当所有html文件夹中.html文件发生改变时，调用htmlmin任务
+	// gulp.watch('src/js/*.js', ['jsmin']);//当所有js文件夹中.js文件发生改变时，调用jsmin任务
+    // gulp.watch('src/less/*.less', ['less']); //当所有less文件夹中.less文件发生改变时，调用less任务
+    gulp.watch('src/**/*.*', ['htmlmin', "jsmin", "less"]).on("change", function(event){
+        // console.log(event.path);
+        livereload.changed(event.path);
+    });
 });
 

@@ -15,13 +15,42 @@
 1. 项目仓库创建 $ git init
 1. 生成.gitignore文件 $ touch .gitignore
 1. 生成README.md文件 $ touch README.md
-1. 安装cnpm $ cnpm install
 1. 生成package.json文件 $ cnpm init
+1. 安装cnpm $ cnpm install
+1. 安装gulp $ cnpm install gulp --save-dev
+1. 生成gulpfile.js文件 $ touch gulpfile.js
+1. **①**安装less插件 $ cnpm install gulp-less --save-dev 
+1. **②**安装css压缩插件 $ cnpm install gulp-clean-css --save-dev
+1. **③**安装js压缩插件 $ cnpm install gulp-uglify --save-dev
+1. **④**安装html压缩插件 $ cnpm install gulp-htmlmin --save-dev
+1. **⑤**安装监听插件 $ cnpm install gulp-watch --save-dev 
+1. **⑥**安装浏览器自动刷新 $ cnpm install gulp-livereload --save-dev
+ 
 
 ##### dir-list(*星标文件在.gitignore内):
 - .git
+- dist
+
+> css
+> html
+> img
+> js
+> libs
+
+
 - ***node_modules**
+- src
+
+> css
+> html
+> img
+> js
+> less
+> libs
+
 - .gitignore
+- gulpfile.js
 - package.json
 - README.md
+
 

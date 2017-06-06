@@ -28,8 +28,10 @@
 1. 配置gulpfile文件，实现自动化构建
 1. 安装http-server服务器，$ cnpm install http-server -g
 1. 在项目文件夹下运行 $ http-server
-1. 浏览器地址输入https：//127.0.0.1:8080 
-1. 安装jQuery $ cnpm install jquery
+1. 在chrome浏览器中安装插件 liverelode 
+1. 浏览器地址输入https：//127.0.0.1:8080
+1. 安装sublime插件auto save 
+1. 安装jQuery $ cnpm install jquery 
  
 
 ##### dir-list(*星标文件在.gitignore内):

@@ -52,7 +52,7 @@ gulp.task('watch', function () {
 	// gulp.watch('src/js/*.js', ['jsmin']);//当所有js文件夹中.js文件发生改变时，调用jsmin任务
     // gulp.watch('src/less/*.less', ['less']); //当所有less文件夹中.less文件发生改变时，调用less任务
     gulp.watch('src/**/*.*', ['htmlmin', "jsmin", "less"]).on("change", function(event){
-        // console.log(event.path);
+        console.log(event.path);
         livereload.changed(event.path);
     });
 });

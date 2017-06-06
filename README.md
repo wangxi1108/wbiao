@@ -4,9 +4,9 @@
 - npm √
 - cnpm √
 - require.js
-- gulp
-- sass/less
-- jQuery
+- gulp √
+- less √
+- jQuery 
 #### 步骤：
 ##### 项目创建
 
@@ -25,6 +25,7 @@
 1. **④**安装html压缩插件 $ cnpm install gulp-htmlmin --save-dev
 1. **⑤**安装监听插件 $ cnpm install gulp-watch --save-dev 
 1. **⑥**安装浏览器自动刷新 $ cnpm install gulp-livereload --save-dev
+1. 安装jQuery $ cnpm install jquery
  
 
 ##### dir-list(*星标文件在.gitignore内):
@@ -34,7 +35,7 @@
 > css
 > html
 > img
-> js
+> js[jquery.min.js]
 > libs
 
 
@@ -44,7 +45,7 @@
 > css
 > html
 > img
-> js
+> js[jquery.js]
 > less
 > libs
 

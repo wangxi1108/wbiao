@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<head>
+		<meta charset="UTF-8">
 <title>用户中心_万表网-值得信任名表商城【正品】买原装世界名表、天梭手表、帝舵、梅花、欧米茄、浪琴表网站</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
 <link href="../css/public.css" rel="stylesheet">
 <link href="../css/sign_up.css" rel="stylesheet">
-<script scr="../js/gVerify.js"></script>
 </head>
 <body>
 	<!-- ******头部****** -->
@@ -31,18 +27,8 @@
 						<p id="test">
 							<span class="chatcha"></span>
 							<input type="text" class="init" id="captcha" name="captcha" placeholder="验证码" maxlength="4">
-							<i id="captchaimg"></i>
+							<i id="captchaimg" title="看不清？点击更换另一个验证码。"></i>
 						</p>
-
-
-
-
-
-
-
-
-
-
 						<p>
 							<span class="num"></span>
 							<input type="text" class="init mobnum" id="chatnum" name="chatnum" placeholder="请输入短信验证码" maxlength="6">
@@ -57,7 +43,7 @@
 							<input type="password" class="init" id="confirm_psd" name="confirm_psd" placeholder="请再次输入密码" value maxlength="100">
 						</p>
 						<p class="sbm">
-							<input type="submit" value="立即注册" class="submit">
+							<input type="button" value="立即注册" id="submit">
 						</p>
 						<p class="xieyi">点击“立即注册”，即表示您同意并愿意遵守<a href="">万表网用户协议</a>
 						</p>
@@ -70,24 +56,23 @@
     <div id="footer">
 		<div class="likely"></div>
     </div>
-    <script>
-    	var verifyCode = GVerify("captchaimg");
-		document.getElementById("captcha").onblur = function(){
-			var res = verifyCode.validate(document.getElementById("captcha").value);
-			if(res){
-				alert("验证正确");
-			}else{
-				alert("验证码错误");
-			}
-		};
-	</script>
+    <script src="../libs/gVerify.js"></script>
 	<script src="../libs/jquery-1.12.4.min.js"></script>
     <script>
-		$(function () {
+    	$(function () {
 			$("#header .likely .header_logo").load("include/header.html");
 			$("#footer .likely").load("include/footer.html");
 		});
+		var verifyCode = new GVerify("captchaimg");
+		document.getElementById("submit").onclick = function(){
+			var res = verifyCode.validate(document.getElementById("captcha").value);
+			if(res){
+				// alert("验证正确");
+			}else{
+				alert("验证码错误，请重新输入");
+			}
+		};
 	</script>
-
 </body>
+
 </html>

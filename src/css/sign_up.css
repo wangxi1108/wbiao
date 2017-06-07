@@ -72,7 +72,7 @@
 	height: 38px;
 	background: red;
 	position: absolute;
-	top:0;
+	top:2px;
 	right: 0;
 }
 #main #sign_up .sign_up_tab .form p .num{
@@ -116,7 +116,7 @@
 #main #sign_up .sign_up_tab .form .sbm{
 	margin-top: 35px;
 }
-#main #sign_up .sign_up_tab .form .sbm .submit{
+#main #sign_up .sign_up_tab .form .sbm #submit{
 	width: 340px;
 	height: 38px;
 	font-size: 14px;
@@ -124,6 +124,7 @@
 	color: #fff;
 	border: none;
 	border-radius: 2px;
+	cursor: pointer;
 }
 #main #sign_up .sign_up_tab .form .xieyi a{
 	color: #000;

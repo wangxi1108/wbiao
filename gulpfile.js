@@ -5,6 +5,7 @@ var gulp = require('gulp'),
 	less = require('gulp-less'),
 	cssmin = require('gulp-clean-css'),
 	jsmin = require('gulp-uglify'),
+    // imgmin = require('gulp-imagemin'),
 	watch = require('gulp-watch'),
 	livereload = require('gulp-livereload');
 
@@ -44,7 +45,6 @@ gulp.task('htmlmin', function () {
         .pipe(htmlmin(options))
         .pipe(gulp.dest('dist/html'));
 });
-
 /*添加监听*/
 gulp.task('watch', function () {
     livereload.listen();

@@ -6,7 +6,7 @@
 - require.js
 - gulp √
 - less √
-- jQuery 
+- jQuery √
 #### 步骤：
 ##### 项目创建
 
@@ -41,23 +41,33 @@
 > css
 > html
 > img
-> js[jquery.min.js]
-> libs
+> js
+> libs[jquery.min.js]
 
 
 - ***node_modules**
 - src
 
+
 > css
-> html
+> date
+> html[include]
 > img
-> js[jquery.js]
+> js
 > less
-> libs
+> libs[jquery.js]
 
 - .gitignore
 - gulpfile.js
 - package.json
 - README.md
 
+##### 目前进度：
 
+完成首页，注册页面，登录页面，购物车，基本布局
+头部尾部分离
+明日任务：
+完成首页动画特效的添加
+重构首页结构及命名，
+arttemplt模板添加
+json文件

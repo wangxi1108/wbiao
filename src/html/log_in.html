@@ -4,18 +4,18 @@
 	<meta charset="UTF-8">
 	<title>用户中心_万表网-值得信任名表商城【正品】买原装世界名表、天梭手表、帝舵、梅花、欧米茄、浪琴表网站</title>
 </head>
+<link href="../css/public.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/log_in.css">
+<script src="../libs/jquery-1.12.4.min.js"></script>
+</head>
 <body>
-	<!-- **************************头部 ：logo区域*************************** -->
+	<!-- ******头部****** -->
     <div id="header">
-		<div class="logo">
-			<a href="#" title="正品名表 终身服务">正品名表 终身服务</a>
-			<span class="logotext">
-				<img src="../img/header/logoname.jpg" title="正品名表 终身服务" alt="正品名表 终身服务">
-			</span>
-		</div>
+		<div class="likely">
+    		<div class="header_logo"></div>
+    	</div>
     </div>
-    <!-- ************************主体：表单登录区域************************** -->
+    <!-- ******登录****** -->
     <div id="main">
     	<div class="content">
     		<a href="#" id="bannerlink"></a>
@@ -47,10 +47,10 @@
 			</div>
 		</div>
     </div>
-    <!-- ******************************底部********************************** -->
+    <!-- ******底部****** -->
     <div id="footer">
-		<div class="info">
-			<p class="p1">
+		<div class="footer_nav">
+			<p>
 				<a href="#" target="_blank">关于我们 </a>
 				<span> | </span>
 				<a href="#" target="_blank">联系我们</a>
@@ -67,27 +67,21 @@
 				<span> | </span>
 				<a href="#" target="_blank">万表世界</a>
 			</p>
-			<p>万表网名表商城版权所有 2008-2016  ICP备案证书号：粤ICP备09108738号-2  网监备案：4401060103141</p>
-			<p class="copyright">Copyright 2008-2016 WWW.WBIAO.CN.LTD ALL RIGHT RESERVED.</p>
 		</div>
-		<div id="footer_links">
-			<a href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022011072001823" target="_blank">
-				<img src="../img/footer/gzaic.gif" alt="工商网监">
-			</a>
-			<a href="http://www.ccredit.cn/eca/eca_c.aspx?id=231" target="_blank">
-				<img src="../img/footer/eca01.jpg" alt="网购维权标志">
-			</a>
-			<a href="https://ss.knet.cn/verifyseal.dll?sn=e13100844010042768drcq000000&ct=df&a=1&pa=0.8637155061587691" target="_blank">
-				<img width="107" height="40" src="../img/footer/cnnic_en.png" alt="可信网站">
-			</a>
-			<a href="https://search.szfw.org/cert/l/CX20130124002185002221" target="_blank">
-				<img height="38" src="../img/footer/cert.png" alt="诚信网站">
-			</a>
+		<div class="likely">
+			<div class="footer_info"></div>
+			<div class="footer_links"></div>
 		</div>
-		<div id="appcode">
+		<div class="appcode">
 			<a href="#" target="_blank"><img src="../img/footer/wbapp.jpg"></a>
 			<a href="#" target="_blank"><img src="../img/footer/dbgapp.jpg"></a>
 		</div>
     </div>
+    <script>
+		$(function () {
+			$("#header .likely .header_logo").load("include/header.html");
+			$("#footer .likely").load("include/footer.html");
+		});
+	</script>
 </body>
 </html>

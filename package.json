@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "art-template": "^4.10.1",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.4.1",
     "gulp-htmlmin": "^3.0.0",
@@ -13,7 +14,8 @@
     "gulp-livereload": "^3.8.1",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "jquery.cookie": "^1.4.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

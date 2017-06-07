@@ -1,55 +1,17 @@
-*{
-	margin: 0;
-	padding: 0;
-}
-body {
-	background: #fafafa !important;
-}
-img{
-	border: 0;
-}
-a{
-	text-decoration: none;
-}
-i{
-	font-style: normal;
-}
-/*头部样式*/
+/*头部*/
 #header{
 	width: 1000px;
 	height: 140px;
 	margin: 0 auto;
 	padding: 16px 0 20px;
+	overflow: hidden;
 }
-#header .tnw{
-	width: 1000px;
-	height: 33px;
-	line-height: 33px;
-}
-#header .tnw .tnw_tab{
-	float: right;
-	width: 487px;
-}
-#header .tnw .tnw_tab p a,span{
-	font-size: 12px;
-	color: #999;
-	padding: 0 4px;
-}
-#header .tnw .tnw_tab p span b{
-	color: #d00000;
-}
-#header .tnw .tnw_tab p i{
-	font-size: 12px;
-	color: #999;
-	display: inline-block;
-	vertical-align: middle;
-}
-#header .logo{
+#header .header_logo{
 	height: 75px;
 	float: left;
 	margin-top: 15px;
 }
-#header .logo a{
+#header .header_logo a{
 	display: inline-block;
 	width: 121px;
 	height: 75px;
@@ -57,10 +19,86 @@ i{
 	text-indent: -9999px;/*不显示文字*/
 	background: url(../img/header/logo-ico.jpg) no-repeat;
 }
-#header .logo .logotext{
+#header .header_logo span{
 	display: inline-block;
 	vertical-align: bottom;
 	padding-left: 14px;
+}
+/*--------------------------------*/
+#header .header_right{
+	width: 565px;
+	float: right;
+	overflow: hidden;
+}
+#header .header_right .header_nav{
+	float: right;
+	width: 487px;
+	height: 33px;
+	line-height: 33px;
+}
+#header .header_right .header_nav p a,span{
+	font-size: 12px;
+	color: #999;
+	padding: 0 4px;
+}
+#header .header_right .header_nav p span b{
+	color: #d00000;
+}
+#header .header_right .header_nav p i{
+	font-size: 12px;
+	color: #999;
+	display: inline-block;
+	vertical-align: middle;
+}
+#header .header_right .current_step{
+	margin-top: 17px;
+	float: right;
+	position: relative;
+	overflow: hidden;
+}
+#header .header_right .current_step p{
+	width: 400px;
+	height: 2px;
+	background-color: #E4E4E4;
+	position: absolute;
+	top:6px;
+	left: 75px;
+}
+#header .header_right .current_step h2{
+	display: inline-block;
+	box-sizing: border-box;
+	height: 35px;
+	width: 150px;
+	position: relative;
+}
+#header .header_right .current_step h2 span{
+	display: inline-block;
+	padding-top: 17px;
+	padding-left: 0;
+	padding-right: 0;
+	box-sizing: border-box;
+	text-align: center;
+	width: 100%;
+	height: 35px;
+	color: #ccc;
+	font-size: 14px;
+	font-weight: bold;
+	background: url(../img/main/bgct.png) no-repeat -9999px -9999px;
+	background-position: -4px -235px;
+}
+#header .header_right .current_step .gray{
+	background-position: -4px -270px;
+	color: #666;
+}
+#header .header_right .current_step .currentindex{
+	background-position: -4px -305px;
+	color: #d00000;
+}
+#header .header_right .current_step h2:nth-child(4){
+	width: 92px!important;
+}
+#header .header_right .current_step h2:nth-child(4) span{
+	background-position: -30px -235px;
 }
 
 /*主体部分*/
@@ -123,66 +161,68 @@ i{
 #footer{
 	text-align: center;
 }
-#footer .help{
+#footer .footer_help{
 	width: 1000px;
 	height: 145px;
 	margin: 0 auto;
 	position: relative;
 	background: url(../img/footer/footer_help.gif) no-repeat;
 }
-#footer .help dl{
+#footer .footer_help dl{
 	width: 80px;
 	height: 100px;
 	top: 53px;
+	position: absolute;
 	overflow: hidden;
 	text-align: left;
 }
-#footer .help dl dd{
+#footer .footer_help dl dd{
 	line-height: 20px;
 	height: 25px;
 }
-#footer .help dl dd a{
+#footer .footer_help dl dd a{
 	color: #666;
 	font-size: 10px;
 }
-#footer .help dl dt{
+#footer .footer_help dl dt{
 	display: none;
 }
-#footer .help .help_menu_item_1{
-	position: absolute;
+#footer .footer_help .help_1{
 	left: 308px;
 }
-#footer .help .help_menu_item_2{
-	position: absolute;
+#footer .footer_help .help_2{
 	left: 450px;
 }
-#footer .help .help_menu_item_3{
-	position: absolute;
+#footer .footer_help .help_3{
 	left: 600px;
 }
-#footer .help .help_menu_item_4{
-	position: absolute;
+#footer .footer_help .help_4{
 	left: 739px;
 }
-#footer .help .help_menu_item_5{
-	position: absolute;
+#footer .footer_help .help_5{
 	left: 887px;
 }
-#footer .info{
+#footer .footer_info{
 	margin-top: 30px;
 	position: relative;
 }
-#footer .info p{
+#footer .footer_info p{
 	line-height: 20px;
 	font-size: 12px;
 }
-#footer .info .copyright{
+#footer .footer_info .copyright{
 	color: #999;
 }
-#footer_links{
+#footer .footer_links{
 	padding: 10px 0 20px;
 }
-#footer_links a{
+#footer .footer_links a:nth-child(5){
+	display: none;
+}
+#footer .footer_links a:last-child{
+	display: none;
+}
+#footer .footer_links a{
 	width: 107px;
 	height: 35px;
 	margin-right: 10px;

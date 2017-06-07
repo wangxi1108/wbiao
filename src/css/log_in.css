@@ -1,30 +1,15 @@
-*{
-	margin: 0;
-	padding: 0;
-}
-a{
-	text-decoration: none;
-}
-li{
-	list-style-type: none;
-}
-img{
-	border: 0;
-}
-input{
-	outline: none;
-}
+/*头部*/
 #header{
 	width: 1000px;
 	height: 90px;
 	margin: 0 auto;
 }
-#header .logo{
+#header .header_logo{
 	height: 75px;
 	float: left;
 	margin-top: 15px;
 }
-#header .logo a{
+#header  .header_logo a{
 	display: inline-block;
 	width: 121px;
 	height: 75px;
@@ -33,12 +18,13 @@ input{
 	text-indent: -9999px;/*不显示文字*/
 	background: url(../img/header/logo-ico.png) no-repeat;
 }
-#header .logo .logotext{
+#header .header_logo span{
 	display: inline-block;
 	vertical-align: top;
 	padding-left: 14px;
 	margin-top: 14px;
 }
+/*主体部分*/
 #main{
 	width: 100%;
 	height: 480px;
@@ -94,6 +80,7 @@ input{
 	height: 40px;
 	font-size: 14px;
 	padding-left: 35px;
+	border: 1px solid;
 }
 .user_login p{
 	position: relative;
@@ -190,29 +177,42 @@ input{
 	margin: 30px auto 0;
 	position: relative;
 }
-#footer .info .p1{
+#footer .footer_help{
+	display: none;
+}
+#footer .footer_nav p{
 	padding-bottom: 8px;
 }
-#footer .info .p1 a{
+#footer .footer_nav p a{
 	font-size: 12px;
 	color: #333;
 }
-#footer .info .p1 span{
+#footer .footer_nav p span{
 	font-size: 12px;
 	padding: 0 5px 0;
 }
-#footer .info p{
+#footer .footer_info p{
 	color: #999;
 	font-size: 11px;
 }
-#footer .info .copyright{
+#footer .footer_info .copyright{
 	margin-top: 4px;
 }
-#footer #footer_links{
+#footer .footer_links{
 	padding: 10px 0 20px;
 }
-#footer #appcode{
+#footer .footer_links a:nth-child(5){
+	display: none;
+}
+#footer .footer_links a:last-child{
+	display: none;
+}
+#footer .appcode{
 	position: absolute;
 	top: 0;
-	right: 37px;
+	right: 0;
+}
+#footer .appcode a{
+	display: inline-block;
+	margin-left: 15px;
 }

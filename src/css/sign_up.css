@@ -1,29 +1,15 @@
-*{
-	margin: 0;
-	padding: 0;
-}
-body {
-	background: #fafafa !important;
-}
-img{
-	border: 0;
-}
-a{
-	text-decoration: none;
-}
-/*头部样式*/
+/*头部*/
 #header{
 	width: 840px;
 	height: 115px;
 	margin: 0 auto;
-	/*position: relative;*/
 }
-#header .logo{
+#header .header_logo{
 	height: 75px;
 	float: left;
 	margin-top: 50px;
 }
-#header .logo a{
+#header .header_logo a{
 	display: inline-block;
 	width: 121px;
 	height: 75px;
@@ -31,20 +17,18 @@ a{
 	text-indent: -9999px;/*不显示文字*/
 	background: url(../img/header/logo-ico.png) no-repeat;
 }
-#header .logo .logotext{
+#header .header_logo span{
 	display: inline-block;
 	vertical-align: top;
 	padding-left: 18px;
 	margin-top: 5px;
 }
-
 /*主体部分*/
 #main{
 	border: 1px solid #f0f0f0;
 	background: #fff;
 	width: 840px;
 	margin: 40px auto;
-	position: relative;
 }
 #main #sign_up{
 	text-align: center;
@@ -65,13 +49,13 @@ a{
 	overflow: hidden;
 }
 #main #sign_up .sign_up_tab .form p span{
-	width: 15px;
+	width: 16px;
 	height: 16px;
 	display: inline-block;
 	position: absolute;
 	top: 12px;
 	left: 11px;
-	background: url(../images/main/login_ico.png) no-repeat;
+	background: url(../img/main/login_ico.png) no-repeat;
 }
 #main #sign_up .sign_up_tab .form p .mob{
 	background-position: -30px -161px;
@@ -79,12 +63,17 @@ a{
 #main #sign_up .sign_up_tab .form p .chatcha{
 	background-position: 0px -198px;
 }
-#main #sign_up .sign_up_tab .form p #captchaimg{
+#test{
+	position: relative;
+}
+#captchaimg{
+	display: inline-block;
 	width: 98px;
 	height: 38px;
+	background: red;
 	position: absolute;
-	top: 2px;
-	right: 1px;
+	top:0;
+	right: 0;
 }
 #main #sign_up .sign_up_tab .form p .num{
 	background-position: -45px -161px;
@@ -99,6 +88,7 @@ a{
 	color: #333!important;
 	font-size: 12px;
 	background: #fff;
+	cursor:pointer;
 }
 #main #sign_up .sign_up_tab .form p .mobnum{
 	width: 193px !important;
@@ -142,21 +132,24 @@ a{
 #footer{
 	text-align: center;
 }
-#footer .info{
+#footer .footer_help{
+	display: none;
+}
+#footer .footer_info{
 	margin-top: 30px;
 	position: relative;
 }
-#footer .info p{
+#footer .footer_info p{
 	line-height: 20px;
 	font-size: 12px;
 }
-#footer .info .copyright{
+#footer .footer_info .copyright{
 	color: #999;
 }
-#footer_links{
+#footer .footer_links{
 	padding: 10px 0 20px;
 }
-#footer_links a{
+#footer .footer_links a{
 	width: 107px;
 	height: 35px;
 	margin-right: 10px;

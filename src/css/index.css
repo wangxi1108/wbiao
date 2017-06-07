@@ -31,7 +31,6 @@ a{
 #toplink{
 	width: 1200px;
 	height: 60px;
-	/*解决在div中插入图片时，图片会将div下方撑大三像素的问题*/
 	display: block;
 	margin: 0 auto;
 }
@@ -89,7 +88,7 @@ a{
 }
 #logsearch h1 a{
 	display: inline-block;
-	background: url(../base_new.png) no-repeat;
+	background: url(../img/header/base_new.png) no-repeat;
 	background-position: 0 0;
 	width: 112px;
 	height: 75px;
@@ -119,7 +118,7 @@ a{
 	border-radius: 3px;
 	outline: none;
 	padding-left: 30px;
-	background: url(../base_new.png) no-repeat center center;
+	background: url(../img/header/base_new.png) no-repeat center center;
 	background-position: -372px 0;
 }
 #searchtext p a{
@@ -150,7 +149,7 @@ a{
 	display: inline-block;
 	width: 21px;
 	height: 21px;
-	background: url(../bases.png) no-repeat;
+	background: url(../img/header/bases.png) no-repeat;
 	background-position: -118px 0;
 	position: relative;
 	top:5px;
@@ -272,7 +271,7 @@ a{
 	font-size: 12px;
 }
 #floornav ul li:first-child span{
-	background: url(../wbg.png) no-repeat;
+	background: url(../img/main/wbg.png) no-repeat;
 	background-position: 0 0;
 	width: 48px;
 	height: 48px;
@@ -282,7 +281,7 @@ a{
 	left: 20px;
 }
 #floornav ul li:nth-child(2) span{
-	background: url(../wbg.png) no-repeat;
+	background: url(../img/main/wbg.png) no-repeat;
 	background-position: -45px 0;
 	width: 48px;
 	height: 48px;
@@ -292,7 +291,7 @@ a{
 	left: 20px;
 }
 #floornav ul li:nth-child(3) span{
-	background: url(../wbg.png) no-repeat;
+	background: url(../img/main/wbg.png) no-repeat;
 	background-position: -93px 0;
 	width: 48px;
 	height: 48px;
@@ -302,7 +301,7 @@ a{
 	left: 20px;
 }
 #floornav ul li:last-child span{
-	background: url(../wbg.png) no-repeat;
+	background: url(../img/main/wbg.png) no-repeat;
 	background-position: -141px 0;
 	width: 48px;
 	height: 48px;

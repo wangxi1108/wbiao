@@ -55,7 +55,7 @@ i{
 	height: 75px;
 	margin-left: 5px;
 	text-indent: -9999px;/*不显示文字*/
-	background: url(../images/header/logo-ico.jpg) no-repeat;
+	background: url(../img/header/logo-ico.jpg) no-repeat;
 }
 #header .logo .logotext{
 	display: inline-block;
@@ -100,7 +100,7 @@ i{
 	line-height: 46px;
 	padding-top: 96px;
 	font-size: 14px;
-	background: url(../images/main/bgct.png) no-repeat;
+	background: url(../img/main/bgct.png) no-repeat;
 	background-position: center -394px;
 	color: #666;
 }
@@ -116,7 +116,7 @@ i{
 	height: 38px;
 	padding: 0 30px;
 	line-height: 38px;
-	background: #ad0000 url(../images/main/bgxct.png) repeat-x;
+	background: #ad0000 url(../img/main/bgxct.png) repeat-x;
 	background-position: center 0;
 }
 /*底部*/
@@ -128,7 +128,7 @@ i{
 	height: 145px;
 	margin: 0 auto;
 	position: relative;
-	background: url(../images/footer/footer_help.gif) no-repeat;
+	background: url(../img/footer/footer_help.gif) no-repeat;
 }
 #footer .help dl{
 	width: 80px;

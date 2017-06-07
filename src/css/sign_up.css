@@ -29,7 +29,7 @@ a{
 	height: 75px;
 	margin-left: 5px;
 	text-indent: -9999px;/*不显示文字*/
-	background: url(../images/header/logo-ico.png) no-repeat;
+	background: url(../img/header/logo-ico.png) no-repeat;
 }
 #header .logo .logotext{
 	display: inline-block;

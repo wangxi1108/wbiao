@@ -2,19 +2,27 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>万表网</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
+<link rel="stylesheet" href="../css/public.css">
 <link href="../css/index.css" rel="stylesheet">
+<script src="../libs/jquery-1.12.4.min.js"></script>
 </head>
 <body>
     <div id="header">
-		<div id="topbg">
-			<a href="" id="bglink">
-				<img src="../img/header/149482330557865.jpg" alt="" id="toplink">
-			</a>
+		<div class="header_activity">
+			<div class="activity_banner">
+				<a href="#" class="activity_link">
+					<img src="../img/header/149482330557865.jpg" alt="">
+				</a>
+				<a href="#" class="activity_link>
+					<img src="../img/header/149622968004349.jpg" alt="">
+				</a>
+			</div>
 		</div>
+
+
+
+
 		<div id="topmean">
 			<div id="wrap">
 				<ul>
@@ -274,5 +282,25 @@
 			<div class="wrap"></div>
 		</div>
     </div>
+<script>
+	$(function () {
+		var $imgs = $(".activity_link"),
+			len = $imgs.length,
+			currentIndex = 0,
+			nextIndex = currentIndex + 1,
+			timer = null;
+		timer = setInterval(move,3000);
+		function move() {
+			$imgs.eq(currentIndex).fadeOut(1500).end()
+				 .eq(nextIndex).fadeIn(1500);
+			currentIndex = nextIndex;
+			nextIndex++;
+			if (nextIndex >=len) {
+				nextIndex = 0;
+			}
+		}
+	});
+</script>
+
 </body>
 </html>

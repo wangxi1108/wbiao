@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>jquery实现淡入淡出轮播</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<!-- 定制样式 -->
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+	position: absolute;
+	display: none;
+}
+#banner{
+	width: 790px;
+	height: 340px;
+	margin:50px auto;
+	position: relative;
+	overflow: hidden;
+}
+#pages{
+	width: 400px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	margin:300px auto 10px;
+}
+.circle{
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #ccc;
+	opacity: 0.9;
+	float: left;
+	margin:5px;
+}
+.current{
+	background: black;
+}
+#prev, #next {
+			width: 50px;
+			height: 100px;
+			position: absolute;
+			top:0;
+			bottom: 0;
+			margin:auto;
+			background: black;
+			opacity: 0.3;
+			color:white;
+			text-align: center;
+			line-height: 100px;
+			font-size:50px;
+			cursor: default;
+			display: none;
+		}
+		#next {
+			right:0;
+		}
+</style>
+</head>
+<body>
+    <!-- 页面布局 -->
+    <!-- 一个div内嵌套ul，ul内li绝对定位在同一位置 -->
+    <div id="banner">
+		<ul>
+			<li><a href="#"><img src="images/001.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/002.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/003.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/004.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/005.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/006.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/007.jpg" alt=""></a></li>
+			<li><a href="#"><img src="images/008.jpg" alt=""></a></li>
+		</ul>
+		<p id="pages"></p>
+		<div id="prev">&lt;</div>
+		<div id="next">&gt;</div>
+    </div>
+	<!-- 引入jQuery -->
+	<script src="lib/jquery/jquery-1.12.4.min.js"></script>
+	<script>
+	// 使用jQuery对象
+	$(function () {
+		var $imgs = $("li"),//首先获取图片数组
+			len = $imgs.length,//获取到这个图片数组的个数
+			// imgWidth = $imgs[0].outerWidth(),//获取到单个图片的宽
+			currentIndex = 0,
+			nextIndex = currentIndex + 1,
+			html="",//为添加小圆点准备
+			timer = null;
+		timer = setInterval(move,3000)//三秒换一张图片
+
+		/*创建小圆点*/
+		for(var i = 0; i < len; i++){//计算需要创建多少个小圆点
+			html += "<div></div>";
+		};
+		$(html).appendTo('#pages').addClass('circle').eq(0).addClass('current');
+		var circleWidth = $(".circle").eq(0).outerWidth()+10;
+			$("#pages").css({
+				width: (len*circleWidth)+"px"
+			});
+		/*添加小圆点移入事件*/
+		$("#pages").on("mouseover",".circle",function () {
+			if (currentIndex === $(this).index()) {
+				return;
+			}
+			nextIndex = $(this).index();
+			move();
+		})
+		/*添加鼠标移入暂停，移出继续*/
+		$("#banner").hover(function() {
+			clearInterval(timer);
+			$("#prev").show(400);
+			$("#next").show(400);
+		}, function() {
+			timer = setInterval(move,3000);
+			$("#prev").hide();
+			$("#next").hide();
+		});
+		/*添加上下翻页*/
+			$("#prev").click(function() {
+				nextIndex = currentIndex - 1;
+				if (nextIndex < 0) {
+					nextIndex = len -1;
+				}
+				move()
+			});
+			$("#next").click(move);
+		/* 轮播动画创建*/
+		function move() {
+			// 实现淡入淡出需要用到fadeIn()与fadeOut()
+			$imgs.eq(currentIndex).fadeOut(1500).end()
+				 .eq(nextIndex).fadeIn(1500);
+			//实现小圆点的颜色与当前图片对应
+			$(".circle").eq(currentIndex).removeClass('current').end()
+						.eq(nextIndex).addClass('current');
+			/********************************************/
+			currentIndex = nextIndex;
+			nextIndex++;
+			if (nextIndex >=len) {
+				nextIndex = 0;
+			}
+
+		}
+	});
+
+	</script>
+</body>
+</html>

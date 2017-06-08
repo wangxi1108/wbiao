@@ -58,9 +58,44 @@
 	});
 // 底部更多友情链接
 	$(function () {
-			$more=$(".friends-links .more");
-			$more.click(function(event) {
-				// $('.friends-links').prop('height','100px');
-				console.log($('.friends-links').eq(0).attr('height'))
-			});
+		var	$more=$(".friends-links .more");
+		$more.click(function(event) {			
+		height_=$('.friends-links').css("height");
+			if(height_==="20px"){
+				$('.friends-links').css("height","100px")
+			}else{
+					$('.friends-links').css("height","20px")
+				}
+		});
 	});
+	$(function(){
+		var $more=$(".footer_nav .more");
+		$more.click(function(){
+			sty=$(".footer_nav .addmore").css("display");
+			console.log(sty)
+			if (sty==="none") {
+				$(".footer_nav .addmore").css("display","block");
+			}else{
+				$(".footer_nav .addmore").css("display","none");
+			}
+		})
+	})
+//底部二维码切换
+	$(function(){
+		$(".tab_code li").mouseenter(function(){
+			$(this).addClass('code_in').siblings().removeClass('code_in')
+		})
+		$(".tab_code li").eq(0).mouseenter(function(){
+			$(".code_con").eq(0).show().siblings().hide()	
+		})
+		$(".tab_code li").eq(1).mouseenter(function(){
+			$(".code_con2").eq(0).show().siblings().hide()	
+		})
+		$(".tab_code li").eq(2).mouseenter(function(){
+			$(".code_con").eq(2).show().siblings().hide()	
+		})
+		$(".tab_code li").eq(3).mouseenter(function(){
+			$(".code_con2").eq(1).show().siblings().hide()	
+		})
+		
+	})

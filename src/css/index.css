@@ -829,7 +829,7 @@
 #footer .footer_info .footer_wrap .footer_nav a:hover {
 	color: #000
 }
-#footer .footer_info .footer_wrap .footer_nav .b-cml {
+#footer .footer_info .footer_wrap .footer_nav .more {
 	margin-left: 10px;
 	font-family: "宋体";
 	font-size: 14px;
@@ -882,6 +882,9 @@
 	right: 0px;
 	top: 3px;
 	cursor: pointer;
+}
+#footer .footer_wrap .friends-links .more:hover {
+	font-size: 20px;
 }
 
 

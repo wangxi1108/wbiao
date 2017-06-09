@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="../css/public.css">
 <link href="../css/index.css" rel="stylesheet">
 <script src="../libs/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../lib/template-native.js"></script>
 <script src="../js/index.js"></script>
 </head>
 <body>
@@ -95,6 +96,7 @@
 	</div>
 <!-- ******主体****** -->
 	<div id="main">
+		<div id="cttouch"></div>
 	    <div class="main_nav">
 	    	<div class="products_link">
 	    		<a href="">全部腕表</a>
@@ -554,7 +556,24 @@
 			</div>
 	    </div>
 	<!-- ******主体-导航区结束****** -->
-	    <div id="banner"><img src="../img/main/149265388253912.png" alt=""></div>
+	    <div class="main_banner">
+	    	<ul>
+	    		<li style="background: #0B0B0B; display: block;"><a href=""><img src="../img/main/149265388253912.png" alt=""></a></li>
+	    		<li style="background: #04050A;"><a href=""><img src="../img/main/149268395670817.jpg" alt=""></a></li>
+	    		<li style="background: #FAE1C3;"><a href=""><img src="../img/main/149371869237429.jpg" alt=""></a></li>
+	    		<li style="background: #E4E4E4;"><a href=""><img src="../img/main/149482325840606.png" alt=""></a></li>
+	    		<li style="background: #000000;"><a href=""><img src="../img/main/149482838654844.jpg" alt=""></a></li>
+	    		<li style="background: #000000;"><a href=""><img src="../img/main/149516547130414.png" alt=""></a></li>
+	    		<li style="background: #FCFCFC;"><a href=""><img src="../img/main/149518956197228.jpg" alt=""></a></li>
+	    		<li style="background: #0D0D0D;"><a href=""><img src="../img/main/149570828378645.jpg" alt=""></a></li>
+	    		<div class="prnt">
+					<div id="prev"></div>
+					<div id="next"></div>
+				</div>
+	    	</ul>
+    		<p id="pages"></p>
+	    </div>
+	    <!-- 模板加载楼层************************************************************** -->
 	    <div id="floor">
 	    	<ul id="cebiannav">
 				<li>热销</li>
@@ -591,13 +610,77 @@
 					</p>
 				</div>
 				<div class="floorshow">
-					<div class="show_part1"></div>
-					<div class="show_part2"></div>
+					<div class="show_part1">
+						<ul>
+							<li><img src="../img/main/149552222815651.jpg"></li>
+							<li><img src=""></li>
+							<li><img src=""></li>
+							<li><img src=""></li>
+						</ul>
+						<div>
+							<p>爱宝时激薄至简商务腕表</p>
+							<p>7.7毫米流线收边设计</p>
+						</div>
+					</div>
+					<div class="show_part2">
+						<a href="">
+							<p>
+								<img src="../img/main/149510441048664.jpg">
+							</p>
+							<p>法国赫柏林</p>
+							<p>法国总统夫人佩戴品牌</p>
+						</a>
+					</div>
 					<div class="show_part3">
-						<div class="part_1"></div>
-						<div class="part_2"></div>
-						<div class="part_3"></div>
-						<div class="part_4"></div>
+						<div class="part_1">
+							<a href="">
+								<div>
+									<p>天梭TISSOT</p>
+									<p>畅销款升级版</p>
+								</div>
+								<img src="../img/main/149550801121932.jpg" alt="">
+							</a>
+						</div>
+						<div class="part_2">
+							<a href="">
+								<div>
+									<p>天梭TISSOT</p>
+									<p>畅销款升级版</p>
+								</div>
+								<img src="../img/main/149550801121932.jpg" alt="">
+							</a>
+						</div>
+						<div class="part_3">
+							<a href="">
+								<div>
+									<p>天梭TISSOT</p>
+									<p>畅销款升级版</p>
+								</div>
+								<img src="../img/main/149550801121932.jpg" alt="">
+							</a>
+						</div>
+						<div class="part_4">
+							<a href="">
+								<div>
+									<p>天梭TISSOT</p>
+									<p>畅销款升级版</p>
+								</div>
+								<img src="../img/main/149550801121932.jpg" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="clean"></div>
+					<div class="show_part4">
+						<ul>
+							<li><a href=""><img src="../img/main/147219975706799.png" alt="">
+								<span>商标</span>
+							</a></li>
+							<li><a href=""><img src="../img/main/147219975709452.png" alt=""><span>商标</span></a></li>
+							<li><a href=""><img src="../img/main/147219975729781.png" alt=""><span>商标</span></a></li>
+							<li><a href=""><img src="../img/main/147219975755081.png" alt=""><span>商标</span></a></li>
+							<li><a href=""><img src="../img/main/147219975788669.png" alt=""><span>商标</span></a></li>
+							<li><a href=""><img src="../img/main/147219975788669.png" alt=""><span>商标</span></a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -763,6 +846,29 @@
 			</div>
 	    </div>
 	</div>
+	<script type="text/html" id="floor_template">
+
+
+
+
+
+
+
+
+
+	</script>
+	<script>
+// 渲染模板
+		$(function(){
+			$.getJSON("../data/products.json", function(responseData){
+				var data = {
+					products : responseData
+				};
+				var html = template("floor_template",data);
+				$("#floor").append(html);
+			});	
+		})
+</script>
 <!-- ******底部****** -->
     <div id="footer">
 		<div class="footer_red">

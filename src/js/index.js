@@ -86,16 +86,56 @@
 			$(this).addClass('code_in').siblings().removeClass('code_in')
 		})
 		$(".tab_code li").eq(0).mouseenter(function(){
-			$(".code_con").eq(0).show().siblings().hide()	
+			$(".code_con").eq(0).show().siblings().hide()
 		})
 		$(".tab_code li").eq(1).mouseenter(function(){
-			$(".code_con2").eq(0).show().siblings().hide()	
+			$(".code_con2").eq(0).show().siblings().hide()
 		})
 		$(".tab_code li").eq(2).mouseenter(function(){
-			$(".code_con").eq(2).show().siblings().hide()	
+			$(".code_con").eq(2).show().siblings().hide()
 		})
 		$(".tab_code li").eq(3).mouseenter(function(){
-			$(".code_con2").eq(1).show().siblings().hide()	
+			$(".code_con2").eq(1).show().siblings().hide()
 		})
-		
+	})
+// 导航选表中心下拉菜单
+	$(function () {
+		$(".xbzxxl").hover(function() {
+			$(".xuanbiaozhongxin").css('display', 'block');
+
+		}, function() {
+			$(".xuanbiaozhongxin").css('display', 'none');
+			$(".xuanbiaozhongxin").hover(function() {
+				$(".xuanbiaozhongxin").css('display', 'block');
+			}, function() {
+				$(".xuanbiaozhongxin").css('display', 'none');
+			});
+		});
+	})
+// 导航品牌区tab切换
+	$(function () {
+		$(".check").hover(function() {
+			$(this).children('.bside').css('display', 'block');
+		}, function() {
+			$(this).children('.bside').css('display', 'none');
+		});
+	})
+// bside区hover变色
+	$(function () {
+		$(".col p").hover(function() {
+			$(this).css('color', '#000');
+		}, function() {
+			$(this).css('color', '#999');
+		});
+		$(".list_txt_link a").hover(function() {
+			$(this).css({
+				color: '#000',
+				textDecoration: 'underline'
+			});
+		}, function() {
+			$(this).css({
+				color: '#666',
+				textDecoration: 'none'
+			});
+		});
 	})

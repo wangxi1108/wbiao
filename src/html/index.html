@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="../css/public.css">
 <link href="../css/index.css" rel="stylesheet">
 <script src="../libs/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../lib/template-native.js"></script>
+<script type="text/javascript" src="../libs/template-native.js"></script>
 <script src="../js/index.js"></script>
 </head>
 <body>
@@ -600,7 +600,7 @@
 					<li><a href=""><img src="../img/main/148775132200868.jpg" alt=""></a></li>
 				</ul>
 			</div>
-			<div id="floor_2">
+			<!-- <div id="floor_2">
 				<div class="floormean">
 					<h3><a href="">热销首选<span></span></a></h3>
 					<p>
@@ -683,7 +683,7 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div id="floor_2">
 				<div class="floormean">
 					<h3><a href="">闪购特惠<span></span></a></h3>
@@ -841,21 +841,18 @@
 				</div>
 			</div>
 	    </div>
-	    <div id="promise">
+	 <!--    <div id="promise">
 			<div class="wrap">
-			</div>
+			</div> -->
 	    </div>
 	</div>
-	<script type="text/html" id="floor_template">
-
-
-
-
-
-
-
-
-
+<script type="text/html" id="floor_template">
+	
+<% for (var i = 0, len = products.length; i < len; i++) {%>
+		<%var floor = products[i];%>
+			<div><%=floor.h3%></div>
+					
+<% } %>
 	</script>
 	<script>
 // 渲染模板
@@ -865,7 +862,8 @@
 					products : responseData
 				};
 				var html = template("floor_template",data);
-				$("#floor").append(html);
+				$("#footer").append(html);
+				console.log("///...//")
 			});	
 		})
 </script>
@@ -885,7 +883,7 @@
 	                <span class="zp3"></span>
 	                全球联保
 	            </a>
-	            <a href="https://www.wbiao.cn/zt/zhengpinn" target="_blank" rel="nofollow" id="__AD_index_click_11.2.4">
+	            <a href="https://www.wbiao.cn/zt/zhengpinn" target="_blank" r el="nofollow" id="__AD_index_click_11.2.4">
 	                <span class="zp4"></span>
 	                假一赔三
 	            </a>

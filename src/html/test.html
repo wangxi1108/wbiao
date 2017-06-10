@@ -1,4 +1,14 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>万表网</title>
+<script src="../libs/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../libs/template-native.js"></script>
+</head>
+<body>
+<div id="floor"></div>
+<script type="text/html" id="floor_template">
 <% for (var i = 0, len = products.length; i < len; i++) { 
 			var floor = products[i];
 		%>
@@ -88,3 +98,18 @@
 				</div>
 			</div>
 <% } %>
+</script>
+<script>
+// 渲染模板
+		$(function(){
+			$.getJSON("../data/products.json", function(responseData){
+				var data = {
+					products : responseData
+				};
+				var html = template("floor_template",data);
+				$("#floor").append(html);
+			});	
+		})
+</script>
+</body>
+</html>

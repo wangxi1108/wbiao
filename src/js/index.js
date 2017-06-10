@@ -1,3 +1,29 @@
+
+$(function () {
+	// 加载头部底部
+			$("#header").load("include/index-header.html");
+			$("#footer").load("include/index-footer.html");
+	// 渲染模板
+			$.getJSON('../data/floor.json',function(responseData) {
+				var data = {
+					list : responseData
+				};
+				var html1 = template("art_showpic",data);
+				$(".floor_showpic").append(html1);
+				var html2 = template("art_style_1",data);
+				$(".floor_style_1").append(html2);
+				var html3 = template("art_style_2",data);
+				$(".floor_style_2").append(html3);
+				var html4 = template("art_style_3",data);
+				$(".floor_style_3").append(html4);
+				var html5 = template("art_style_4",data);
+				$(".floor_style_4").append(html5);
+				var html6 = template("art_style_5",data);
+				$(".floor_style_5").append(html6);
+			});
+
+	})
+
 // 头部广告活动区轮播
 	$(function () {
 		var $imgs = $(".activity_link"),

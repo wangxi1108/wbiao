@@ -759,17 +759,17 @@
 #cebiannav li:last-child {
 	border: none
 }
-#floornav {
+.floor_wel {
 	width: 100%;
 	height: 53px;
 	border-bottom: 1px solid #e5e5e5
 }
-#floornav ul {
+.floor_wel ul {
 	width: 1200px;
 	margin: 0 auto;
 	position: relative
 }
-#floornav ul li {
+.floor_wel ul li {
 	float: left;
 	text-align: center;
 	box-sizing: border-box;
@@ -779,11 +779,11 @@
 	line-height: 53px;
 	position: relative
 }
-#floornav ul li a {
+.floor_wel ul li a {
 	color: #666666;
 	font-size: 12px
 }
-#floornav ul li:first-child span {
+.floor_wel ul li:first-child span {
 	background: url(../img/main/wbg.png) no-repeat;
 	background-position: 0 0;
 	width: 48px;
@@ -793,7 +793,7 @@
 	top: 3px;
 	left: 60px
 }
-#floornav ul li:nth-child(2) span {
+.floor_wel ul li:nth-child(2) span {
 	background: url(../img/main/wbg.png) no-repeat;
 	background-position: -45px 0;
 	width: 48px;
@@ -803,7 +803,7 @@
 	top: 3px;
 	left: 60px
 }
-#floornav ul li:nth-child(3) span {
+.floor_wel ul li:nth-child(3) span {
 	background: url(../img/main/wbg.png) no-repeat;
 	background-position: -93px 0;
 	width: 48px;
@@ -813,7 +813,7 @@
 	top: 3px;
 	left: 60px
 }
-#floornav ul li:last-child span {
+.floor_wel ul li:last-child span {
 	background: url(../img/main/wbg.png) no-repeat;
 	background-position: -141px 0;
 	width: 48px;
@@ -823,24 +823,24 @@
 	top: 3px;
 	left: 60px
 }
-#floor_1 {
+.floor_showpic {
 	width: 1200px;
 	height: 150px;
 	margin: 30px auto 40px
 }
-#floor_1 ul li {
+.floor_showpic ul li {
 	float: left;
 	height: 150px;
 	margin-right: 4px
 }
-#floor_1 ul li:last-child {
+.floor_showpic ul li:last-child {
 	margin-right: 0
 }
-#floor_1 ul li img {
+.floor_showpic ul li img {
 	width: 297px;
 	height: 150px
 }
-#floor_2 {
+.floor_2 {
 	width: 1200px;
 	height: 499px;
 	margin: 0 auto 40px
@@ -856,7 +856,7 @@
 	color: #333
 }
 .floormean h3 a span {
-	background: url(../heading.png) no-repeat;
+	/*background: url(../heading.png) no-repeat;*/
 	background-position: 0 0;
 	width: 67px;
 	height: 25px;
@@ -1109,51 +1109,43 @@
 	top: 17px;
 	left: 50px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.floorshow .show_part3 .part2{
-	position: absolute;
-	top: 45px;
-	left: 25px;
+.like-l{
+	width: 270px;
+	height: 246px;
+	margin-left: 17px;
+	float: left;
 }
-.floorshow .show_part3 .part3{
-	position: absolute;
-	top: 45px;
-	left: 25px;
+.like-l li{
+	float: left;
+	overflow: hidden;
+	width: 100px;
+	height: 40px;
+	text-align: center;
+	margin-left: 30px;
 }
-.floorshow .show_part3 .part4{
-	position: absolute;
-	top: 45px;
-	left: 25px;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-#floor_3 {
+.like-r{
+	width: 880px;
+	height: 246px;
+	float: right;
+}
+.like-r dl{
+	width: 180px;
+	float: left;
+	text-align: center;
+	position: relative;
+	padding: 0 20px;
+	margin:20px 0;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 12px;
+}
+.like-r dl img{
+	width: 160px;
+	height: 160px;
+}
+.floor_style_3 {
 	width: 1200px;
-	height: 499px;
 	margin: 0 auto 40px;
 	overflow: hidden
 }
@@ -1175,7 +1167,6 @@
 	height: 260px
 }
 .brand dl a dd {
-	background: black;
 	width: 292px;
 	height: 76px
 }
@@ -1183,26 +1174,58 @@
 	border-top: 1px solid #ccc;
 	width: 1200px;
 	height: 247px;
-	margin-bottom: 35px;
 	background: pink
 }
-#floor_4 {
+.floor_style_5 {
 	width: 1200px;
 	height: 321px;
 	margin: 0 auto
 }
-#floor_4 #floor_left {
+.floor_style_5 #floor_left {
 	float: left;
 	width: 292px;
 	height: 321px;
-	background: pink
 }
-#floor_4 #floor_right {
+.floor_style_5 #floor_right {
 	float: right;
 	width: 890px;
 	height: 321px;
-	background: purple
 }
+
+
+#floor_left img{
+	width: 290px;
+	height: 180px;
+}
+#floor_right .new_wrap{
+	overflow: hidden;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 40px 0 53px 0;
+	height: 177px;
+}
+#floor_right .new_wrap dl{
+	float: left;
+	width: 255px;
+	padding: 0 22px 0 15px;
+}
+#floor_right .new_wrap dl dt{
+	width: 225px;
+	height: 46px;
+	text-align: center;
+}
+#floor_right .new_wrap dl dd a{
+	line-height: 26px;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%
+	color:#666;
+}
+
+
+
 #promise {
 	height: 62px;
 	background: red;

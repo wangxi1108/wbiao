@@ -8,7 +8,6 @@
 <link href="../css/index.css" rel="stylesheet">
 <script src="../libs/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="../libs/template-native.js"></script>
-<script src="../js/index.js"></script>
 </head>
 <body>
 <!-- ******头部****** -->
@@ -75,6 +74,10 @@
 			<li><a href="#"><img src="../img/main/<%=showpic.img[2]%>.jpg"></a></li>
 			<li><a href="#"><img src="../img/main/<%=showpic.img[3]%>.jpg"></a></li>
 		</ul>
+		<p>
+			<span></span>
+			<span></span>
+		</p>
 	<%}%>
 	</script>
 	<!-- ******floor_style_1内容****** -->
@@ -96,7 +99,11 @@
 					<li><img src="../img/main/<%= floor.part1_img[0] %>.jpg"></li>
 					<li><img src="../img/main/<%= floor.part1_img[1] %>.jpg"></li>
 					<li><img src="../img/main/<%= floor.part1_img[2] %>.jpg"></li>
-					<!-- <li><img src="../img/main/<%= floor.part1_img[3] %>.png"></li> -->
+					<li><img src="../img/main/<%= floor.part1_img[3] %>.jpg"></li>
+	    		</ul>
+	    		<div id="prev2"></div>
+				<div id="next2"></div>
+    		<p id="pages2"></p>
 				</ul>
 				<div>
 					<p><%= floor.part1_txt[0] %></p>
@@ -439,5 +446,7 @@
 
 	})
 	</script>
+
+<script src="../js/index.js"></script>
 </body>
 </html>

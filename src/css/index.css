@@ -39,7 +39,7 @@
 	padding: 0 15px;
 	height: 30px;
 	border-radius: 20px;
-	background: rgba(0,0,0,0.7);
+	background: rgba(0,0,0,1);
 	text-align: center;
 	margin:385px auto 0;
 }
@@ -67,62 +67,57 @@
 	margin: 0 auto;
 	position: relative;
 }
+
+
+
+
 #prev, #next {
 	width: 30px;
 	height: 90px;
 	position: absolute;
 	z-index: 4;
 	top:40%;
-	text-align: center;
-	line-height: 100px;
-	font-size:50px;
 	cursor: pointer;
 	background: url(../img/main/indexs.png);
 }
+#prev2, #next2 {
+	width: 30px;
+	height: 90px;
+	position: absolute;
+	z-index: 4;
+	top:40%;
+	cursor: pointer;
+	padding: 0;
+	background: url(../img/main/indexs.png) no-repeat;
+}
 #prev{
 	left:210px;
+	background-position: 0 -16px;
+}
+#prev2{
+	left:0px;
 	background-position: 0 -16px;
 }
 #next {
 	right: 0;
 	background-position: -30px -16px;
 }
+#next2 {
+	right: 0;
+	background-position: -30px -16px;
+}
 #prev:hover{
+	background-position: 0 -106px;
+}
+#prev2:hover{
 	background-position: 0 -106px;
 }
 #next:hover{
 	background-position: -30px -106px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#next2:hover{
+	background-position: -30px -106px;
+}
 #floor {
 	width: 1200px;
 	margin: 0 auto
@@ -175,8 +170,12 @@
 }
 .floor_wel ul li a {
 	color: #666666;
-	font-size: 12px
+	font-size: 14px
 }
+.floor_wel ul li a:hover{
+	color:darkred;
+}
+
 .floor_wel ul li:first-child span {
 	background: url(../img/main/wbg.png) no-repeat;
 	background-position: 0 0;
@@ -205,7 +204,7 @@
 	display: inline-block;
 	position: absolute;
 	top: 3px;
-	left: 60px
+	left: 50px
 }
 .floor_wel ul li:last-child span {
 	background: url(../img/main/wbg.png) no-repeat;
@@ -220,20 +219,64 @@
 .floor_showpic {
 	width: 1200px;
 	height: 150px;
-	margin: 30px auto 40px
+	margin: 30px auto 40px;
+	position: relative;
+	overflow: hidden;
 }
 .floor_showpic ul li {
 	float: left;
+	width: 297px;
 	height: 150px;
-	margin-right: 4px
+	margin-right: 4px;
+	overflow: hidden;
 }
 .floor_showpic ul li:last-child {
 	margin-right: 0
 }
 .floor_showpic ul li img {
 	width: 297px;
-	height: 150px
+	height: 150px;
+	transition: 2s;
 }
+.floor_showpic ul li img:hover{
+	transform: scale(1.1);
+}
+.floor_showpic p{
+	width: 1200px;
+	margin: 0 auto;
+	position: absolute;
+	z-index: 2;
+	top:30%;
+}
+.floor_showpic p span{
+	display: block;
+	width: 28px;
+	height: 60px;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	background: url(../img/main/index_btn.png) no-repeat;
+}
+.floor_showpic p span:first-child{
+	left: -30px;
+	background-position: 0 0;
+}
+.floor_showpic p span:last-child{
+	right: -30px;
+	background-position: -32px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 .floor_2 {
 	width: 1200px;
 	height: 499px;
@@ -298,10 +341,13 @@
 	width: 400px;
 	height: 377px;
 	position: absolute;
+	overflow: hidden;
 }
 .floorshow .show_part1 ul li img{
-	width: 400px;
-	height: 377px;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	animation: suoxiao 4s
 }
 .floorshow .show_part1 div{
 	position: absolute;
@@ -617,17 +663,3 @@
 	width: 100%
 	color:#666;
 }
-
-
-
-#promise {
-	height: 62px;
-	background: red;
-	width: 100%
-}
-.wrap {
-	width: 1200px;
-	margin: 0 auto
-}
-
-

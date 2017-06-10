@@ -1,0 +1,3 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Document</title><script src="../libs/jquery-1.12.4.min.js"></script><script src="../libs/template-native.js"></script><style>#bbc{width:200px;height:200px;background:pink}</style></head><body><div id="bbc">jpp</div><script type="text/html" id="prod_template"> <% for (var i = 0, len = products.length; i < len; i++) { 
+			var prod = products[i];
+		%> <div><%= prod.h3 %></div> <% } %> </script><script>$(function(){$.getJSON("../data/products.json",function(t){var p={products:t},a=template("prod_template",p);$("#bbc").append(a)})})</script></body></html>

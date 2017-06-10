@@ -60,6 +60,7 @@
 			<div class="floor_style_4"></div>
 			<div class="floor_style_5"></div>
 		</div>
+	</div>
 <!-- ******底部****** -->
     <div id="footer"></div>
 
@@ -96,13 +97,14 @@
 		<div class="floorshow">
 			<div class="show_part1">
 				<ul>
-					<li><img src="../img/main/<%= floor.part1_img[0] %>.jpg"></li>
-					<li><img src="../img/main/<%= floor.part1_img[1] %>.jpg"></li>
-					<li><img src="../img/main/<%= floor.part1_img[2] %>.jpg"></li>
-					<li><img src="../img/main/<%= floor.part1_img[3] %>.jpg"></li>
+					<li class="<%=floor.class%>"><img src="../img/main/<%= floor.part1_img[0] %>.jpg"></li>
+					<li class="<%=floor.class%>"><img src="../img/main/<%= floor.part1_img[1] %>.jpg"></li>
+					<li class="<%=floor.class%>"><img src="../img/main/<%= floor.part1_img[2] %>.jpg"></li>
+					<li class="<%=floor.class%>"><img src="../img/main/<%= floor.part1_img[3] %>.jpg"></li>
+					<div id="prev2"></div>
+					<div id="next2"></div>
 	    		</ul>
-	    		<div id="prev2"></div>
-				<div id="next2"></div>
+	    		
     		<p id="pages2"></p>
 				</ul>
 				<div>

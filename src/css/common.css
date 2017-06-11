@@ -61,8 +61,11 @@
 	color: #ccbeb8;
 	font-size: 11px
 }
+.helplink:hover{
+	color: #000!important;
+}
 #header .header_nav .header_nav_tab ul li a:hover {
-	color: white !important
+	color: white;
 }
 #header .header_nav .header_nav_tab ul li:last-child {
 	width: 76px
@@ -90,11 +93,11 @@
 #header .header_nav .header_nav_tab ul li:nth-child(4) {
 	position: relative
 }
-#header .header_nav .header_nav_tab ul li:nth-child(4):hover {
-	background-color: white
+#header .header_nav .header_nav_tab ul li:nth-child(4):hover{
+	background: white!important;
 }
-#header .header_nav .header_nav_tab ul li:nth-child(4):hover a {
-	color: black !important
+#header .header_nav .header_nav_tab ul li:nth-child(4):hover a{
+	color:black!important;
 }
 #header .header_nav .header_nav_tab ul li:nth-child(4):hover .nav_touch_block {
 	display: block
@@ -150,9 +153,13 @@
 #header .header_nav .header_nav_tab ul li:nth-child(6):hover {
 	background-color: white
 }
-#header .header_nav .header_nav_tab ul li:nth-child(6):hover a {
-	color: black !important
+#header .header_nav .header_nav_tab ul li:nth-child(6):hover .block2 {
+	color: black!important;
 }
+.helplink{
+	color: #666!important;
+}
+
 #header .header_nav .header_nav_tab .nav_touch_block2 {
 	width: 220px;
 	height: 171px;
@@ -165,15 +172,6 @@
 }
 #header .header_nav .header_nav_tab ul li:nth-child(6):hover .nav_touch_block2 {
 	display: block
-}
-#header .header_nav .header_nav_tab ul li:nth-child(6):hover .nav_touch_block2 a {
-	color: #666
-}
-#header .header_nav .header_nav_tab .nav_touch_block2 .helplink {
-	box-sizing: border-box
-}
-#header .header_nav .header_nav_tab .nav_touch_block2 .helplink:hover {
-	padding-left: 2px
 }
 #header .header_nav .header_nav_tab .nav_touch_block2 .helptxt {
 	width: 185px;

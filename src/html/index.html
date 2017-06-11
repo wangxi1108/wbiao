@@ -35,15 +35,16 @@
 	    </div>
 	<!-- ******主体-楼层区****** -->
 	    <div id="floor">
-	    	<!-- <ul id="cebiannav">
-				<li>热销</li>
+	    	<ul id="cebiannav">
+				<li class="active">热销</li>
 				<li>闪购</li>
 			    <li>新品</li>
 				<li>品牌</li>
 			    <li>猜你<br>喜欢</li>
 			 	<li>晒单</li>
 				<li>咨讯</li>
-			</ul> -->
+			</ul>
+			<div id="goTop">Top</div>
 			<div class="floor_wel">
 				<ul>
 					<li><a href=""><span></span>自营正品直采</a></li>
@@ -85,7 +86,8 @@
 	<script type="text/html" id="art_style_1">
 	<% for (var i = 1, len = list.length; i < 4; i++){
 		var floor = list[i];
-	%>
+	%>  
+		<div class="louceng">
 		<div class="floormean">
 			<h3><a href=""><%= floor.h3 %><span></span></a></h3>
 			<p>
@@ -96,18 +98,16 @@
 		</div>
 		<div class="floorshow">
 			<div class="show_part1">
-				<ul>
+				<ul >
 					<li class="<%=floor.class%>"><img src="../img/main/<%= floor.part1_img[0] %>.jpg"></li>
 					<li class="<%=floor.class%>"><img src="../img/main/<%= floor.part1_img[1] %>.jpg"></li>
 					<li class="<%=floor.class%>"><img src="../img/main/<%= floor.part1_img[2] %>.jpg"></li>
 					<li class="<%=floor.class%>"><img src="../img/main/<%= floor.part1_img[3] %>.jpg"></li>
-					<div id="prev2"></div>
-					<div id="next2"></div>
+					<div id="<%=floor.prnt[0]%>" class="prev"></div>
+					<div id="<%=floor.prnt[1]%>" class="next"></div>
 	    		</ul>
-	    		
-    		<p id="pages2"></p>
-				</ul>
-				<div>
+    		<p id="<%=floor.p_class%>" class="pages"></p>
+				<div class="part1_txt">
 					<p><%= floor.part1_txt[0] %></p>
 					<p><%= floor.part1_txt[1] %></p>
 				</div>
@@ -173,6 +173,7 @@
 				</ul>
 			</div>
 		</div>
+		</div>
 	<% } %>
 	</script>
 	<!-- ******floor_style_2内容****** -->
@@ -180,6 +181,7 @@
 	<% for (var i = 4, len = list.length; i < 5; i++){
 		var floor2 = list[4];
 	%>
+		<div class="louceng">
 		<div class="floormean">
 			<h3><a href=""><%=floor2.h3%><span></span></a></h3>
 			<p>
@@ -262,12 +264,14 @@
 				</a>
 			</dl>
 		</div>
+		</div>
 	<% } %>
 	</script>
 	<!-- ******floor_style_3内容****** -->
 	<script type="text/html" id="art_style_3">
 		<% for(var i = 5,len=list.length; i< 6 ; i++){
 		var floor3=list[5]; %>
+		<div class="louceng">
 		<div class="floormean">
 			<h3><a href=""><%=floor3.h3%><span></span></a></h3>
 			<p><span>X</span><a href=""><%=floor3.top_txt%></a></p>
@@ -276,7 +280,7 @@
 			<div class="like-l">
 				<ul>
 					<li><a href=""><img src="../img/main/<%=floor3.logo_img[0]%>.png" alt=""></a></li>
-					<li><a href=""><img src="../img/main/<%=floor3.logo_img[1]%>.png" alt=""></li>
+					<li><a href=""><img src="../img/main/<%=floor3.logo_img[1]%>.png" alt=""></a></li>
 					<li><a href=""><span><%=floor3.logo_txt[0]%></span></a></li>
 					<li><a href=""><span><%=floor3.logo_txt[1]%></span></a></li>
 					<li><a href=""><span><%=floor3.logo_txt[2]%></span></a></li>
@@ -324,12 +328,14 @@
 				</dl>
 			</div>
 		</div>
+		</div>
 		<%}%>
 	</script>
 	<!-- ******floor_style_4内容****** -->
 	<script type="text/html" id="art_style_4">
 		<% for(var i = 6,len=list.length; i< 7 ; i++){
 		var floor4=list[6]; %>
+		<div class="louceng">
 		<div class="floormean">
 			<h3><a href=""><%=floor4.h3%><span></span></a></h3>
 			<p>
@@ -362,17 +368,18 @@
 				</a>
 			</dl>
 		</div>
+		</div>
 		<%}%>
 	</script>
 	<!-- ******floor_style_5内容****** -->
 	<script type="text/html" id="art_style_5">
 		<% for(var i = 7,len=list.length; i< 8 ; i++){
 			var floor5=list[7]; %>
+			<div class="louceng">
 			<div id="floor_left">
 				<div class="floormean">
 					<h3><a href=""><%=floor5.h3[0]%><span></span></a></h3>
-					<div>
-						<a href=""><img src="../img/main/<%=floor5.left_img[0]%>.png" alt=""></a>
+					<a href=""><img src="../img/main/<%=floor5.left_img[0]%>.png" alt=""></a>
 						<p>
 							<a href=""><%=floor5.left_txt[0]%></a>
 							<a href=""><%=floor5.left_txt[1]%></a>
@@ -381,13 +388,11 @@
 							<a href=""><%=floor5.left_txt[4]%></a>
 							<a href=""><%=floor5.left_txt[5]%></a>
 						</p>
-					</div>
-
 				</div>
 			</div>
 			<div id="floor_right">
 				<div class="floormean">
-					<h3><a href=""><%=floor5.h3[0]%><span></span></a></h3>
+					<h3><a href=""><%=floor5.h3[1]%><span></span></a></h3>
 					<p>
 						<a href=""><%=floor5.top_txt%></a><span>></span>
 					</p>
@@ -418,6 +423,7 @@
 						<dd><a href=""><%=floor5.xueyuan[4]%></a></dd>
 					</dl>
 				</div>
+			</div>
 			</div>
 		<%}%>
 	</script>

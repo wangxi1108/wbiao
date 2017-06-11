@@ -1,4 +1,6 @@
-
+.active{
+	background: white; color: darkred;
+}
 #main .main_banner {
 	width: 100%;
 	height: 430px;
@@ -53,7 +55,6 @@
 	margin: 10px;
 }
 .current{
-	background: black;
 	width: 14px;
 	height: 14px;
 	border: 2px solid white;
@@ -77,14 +78,15 @@
 	position: absolute;
 	z-index: 4;
 	top:40%;
+	display: none;
 	cursor: pointer;
 	background: url(../img/main/indexs.png);
 }
-#prev2, #next2 {
+.prev, .next {
 	width: 30px;
 	height: 90px;
 	position: absolute;
-	z-index: 999;
+	z-index: 4;
 	top:40%;
 	cursor: pointer;
 	display: none;
@@ -95,7 +97,7 @@
 	left:210px;
 	background-position: 0 -16px;
 }
-#prev2{
+.prev{
 	left:0px;
 	background-position: 0 -16px;
 }
@@ -103,20 +105,20 @@
 	right: 0;
 	background-position: -30px -16px;
 }
-#next2 {
+.next {
 	right: 0;
 	background-position: -30px -16px;
 }
 #prev:hover{
 	background-position: 0 -106px;
 }
-#prev2:hover{
+.prev:hover{
 	background-position: 0 -106px;
 }
 #next:hover{
 	background-position: -30px -106px;
 }
-#next2:hover{
+.next:hover{
 	background-position: -30px -106px;
 }
 #floor {
@@ -128,16 +130,18 @@
 	height: 286px;
 	position: fixed;
 	margin-left: -50px;
-	top: 20%;
+	top: 210px;
 	background: #F4F4F4;
-	font-size: 12px
+	font-size: 12px;
+	display: none;
 }
 #cebiannav li {
 	width: 40px;
 	height: 41px;
 	line-height: 41px;
 	border-bottom: 1px solid #DDDDDD;
-	text-align: center
+	text-align: center;
+	cursor: pointer;
 }
 #cebiannav li:hover{
 	background: #666666;
@@ -338,12 +342,13 @@
 	width: 400px;
 	height: 377px;
 	position: absolute;
+	z-index: 0;
 }
 .floorshow .show_part1 ul li{
 	width: 400px;
 	height: 377px;
 	position: absolute;
-	z-index: 3;
+	z-index: 0;
 	overflow: hidden;
 }
 .floorshow .show_part1 ul li img{
@@ -352,21 +357,47 @@
 	display: inline-block;
 	animation: suoxiao 4s
 }
-.floorshow .show_part1 div{
+.floorshow .show_part1 .part1_txt{
 	position: absolute;
 	z-index: 4;
 	right: 0;
 	bottom: 30px;
 	padding: 10px 15px;
 	width: 225px;
-	background: red;
+	background: rgba(158,42,45,0.7);
 }
-.floorshow .show_part1 div p{
+.floorshow .show_part1 .part1_txt p{
 	color: #fff;
 	display: block;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+.floorshow .show_part1 .circle{
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #666;
+	opacity: 0.9;
+	float: left;
+	margin: 10px;
+	display: inline-block;
+}
+.floorshow .show_part1 .current{
+	width: 10px;
+	height: 10px;
+	vertical-align: middle;
+	border: 2px solid white;
+	background: rgba(0,0,0,0);
+	padding-bottom: 1px;
+	box-sizing: border-box;
+	margin: 8px 10px;
+}
+.pages{
+	box-sizing: border-box;
+	height: 27px;
+	text-align: center;
+	margin:350px auto 0;
 }
 .floorshow .show_part1 div p:first-child {
 	font-size: 20px;
@@ -555,15 +586,29 @@
 	text-align: center;
 	position: relative;
 }
-.floorshow .show_part4 li span{
-	display: block;
+.floorshow .show_part4 li img{
 	width: 100px;
 	height: 40px;
-	line-height: 40px;
+}
+.floorshow .show_part4 li:hover img{
+	display: none;
+}
+.floorshow .show_part4 li:hover span{
+	display: block;
+}
+.floorshow .show_part4 li a span{
+	color:#b20000;
+	font-size: 14px;
+	width: 100px;
+	height: 24px;
+	line-height: 24px;
 	position: absolute;
-	background: rgba(0,0,0,0.7);
+	border:1px solid #b30000;
+	border-radius: 5px;
+	padding: 8px 0;
 	top: 17px;
 	left: 50px;
+	display: none;
 }
 .like-l{
 	width: 270px;
@@ -573,11 +618,29 @@
 }
 .like-l li{
 	float: left;
-	overflow: hidden;
 	width: 100px;
 	height: 40px;
 	text-align: center;
 	margin-left: 30px;
+	margin-top: 15px;
+}
+.like-l li span{
+	font-size: 14px;
+	border: 1px solid #999;
+	border-radius: 5px;
+	padding: 8px 0;
+	margin-top: 15px;
+	width: 100px;
+	display: block;
+	float: left;
+	height: 21px;
+	line-height: 21px;
+}
+.like-l li:hover span{
+	border: 1px solid #b30000;
+}
+.like-l li:hover a span{
+	color: #b20000!important;
 }
 .like-r{
 	width: 880px;
@@ -599,6 +662,18 @@
 .like-r dl img{
 	width: 160px;
 	height: 160px;
+}
+.like-r dl dd{
+	margin-top: 10px;
+}
+.like-r dl dd p:first-child{
+	color: #333;
+}
+.like-r dl dd p:last-child{
+	color: #c00;
+}
+.like-r dl dd p span{
+	color: #c00;
 }
 .floor_style_3 {
 	width: 1200px;
@@ -625,7 +700,21 @@
 }
 .brand dl a dd {
 	width: 292px;
-	height: 76px
+	height: 89px;
+	background: #EEEEEE;
+	text-align: center;
+}
+.brand dl a dd p{
+	width: 292px;
+	height: 40px;
+	padding: 10px 0 8px 0;
+}
+.brand dl a dd p:last-child{
+	color: #666;
+	font-size: 12px;
+	height: 31px!important;
+	padding-top: 0;
+	padding-bottom: 13px;
 }
 .brand img{
 	transition: 2s
@@ -637,7 +726,13 @@
 	border-top: 1px solid #ccc;
 	width: 1200px;
 	height: 247px;
-	background: pink
+}
+.floor_style_4 .brand dd{
+	width: 270px;
+	height: 24px;
+	color: #333;
+	text-align: left;
+	padding: 18px 0 18px 22px;
 }
 .floor_style_5 {
 	width: 1200px;
@@ -657,8 +752,30 @@
 
 
 #floor_left img{
-	width: 290px;
+	width: 292px;
 	height: 180px;
+	margin-top: 10px;
+	display: inline-block;
+}
+#floor_left .floormean p{
+	width: 290px;
+	height: 60px;
+	border: 1px solid #e5e5e5;
+	border-top: 0;
+	padding: 15px 0;
+	margin-top: -13px;
+}
+#floor_left .floormean p a{
+	display: block;
+	width: 24.5%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 12px;
+	float: left;
+}#floor_left .floormean p a:hover{
+	color: #ce0000;
+    text-decoration: underline;
 }
 #floor_right .new_wrap{
 	overflow: hidden;
@@ -674,15 +791,42 @@
 }
 #floor_right .new_wrap dl dt{
 	width: 225px;
-	height: 46px;
-	text-align: center;
+	height: 26px;
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+#floor_right .new_wrap dl dt a{
+	color: #333;
 }
 #floor_right .new_wrap dl dd a{
 	line-height: 26px;
+	font-size: 12px;
 	display: block;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	width: 100%
-	color:#666;
+	width: 100%;
+	color: #666
+}
+#floor_right .new_wrap dl a:hover{
+	color: #b01330;
+    text-decoration: underline;
+}
+#goTop {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: gray;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	cursor: pointer;
+	border-radius: 5px;
+	display: none;
+}
+#goTop:hover {
+	background: darkred;
+	color: white;
 }

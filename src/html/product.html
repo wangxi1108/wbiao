@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="../css/public.css">
 <link rel="stylesheet" href="../css/common.css">
 <link rel="stylesheet" href="../css/product.css">
-<link href="../css/index.css" rel="stylesheet">
 <script src="../libs/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="../libs/template-native.js"></script>
 <script src="../js/index.js"></script>
@@ -17,10 +16,9 @@
 <!-- ******主体****** -->
 	<div id="main">
 	    <div class="nav"></div>
-        <div class="main_warp">
-                <div id="cuurentshow">
-                    <div class="currentcall">
-                        当前位置:<a href="">首页</a>
+            <div class="main_warp">
+                <div class="currentshow">
+                    <div class="currentcall">当前位置:<a href="">首页</a>
                         <code>&gt;</code>
                         <a href="">天梭Tissot</a>
                         <code>&gt;</code>
@@ -28,15 +26,12 @@
                         <code>&gt;</code>
                         <a href="">天梭T006.407.11.033.00 自动机械机芯男士表</a>
                     </div>
-                    <span class="others">
-                        <a href="" title="更多Tissot手表" target="_blank" class="more_goods"></a>
-                    </span>
                 </div>
-                <div class="clearfix"></div>
-                <div id="goods" class="v-1225-1000">
-                    <div class="g5-show">
-                        <div class="g5-la">
-                            <div class="g5-gal">
+                <div class="clean"></div>
+                <div id="goods">
+                    <div class="goods_show">
+                        <div class="goods_pic">
+                            <!-- <div class="g5-gal">
                                 <div class="bshow">
                                     <a href="" rel='gal1' class="bimg" id="bimg">
                                         <img src="//qd2.wbiao.co/img/unit/blank.gif" data-original="https://image2.wbiao.co/goods/c/201705/23/T006_407_11_033_00_83405.jpg" class="lazy middle_image">
@@ -100,11 +95,11 @@
                                     我喜欢&nbsp;<i id="gp5-lik-count">2</i>
                                     &nbsp;人
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="g5-ra">
-                            <h1 class="g5-tt" id="g5-tt">全新升级！！！天梭TISSO-力洛克系列 T006.407.11.033.00 自动机械男表</h1>
-                            <div class="g5-ai">
+                        <div class="goods_msg">
+                            <h1 class="prod_name">全新升级！！！天梭TISSO-力洛克系列 T006.407.11.033.00 自动机械男表</h1>
+                            <div class="prod_xbp">
                                 <dl>
                                     <dt>型号:</dt>
                                     <dd>T006.407.11.033.00</dd>
@@ -119,105 +114,252 @@
                                 </dl>
                                 <div class="clear"></div>
                             </div>
-                            <a href="javascript:;" class="g5-gu pc_to_ntalk" id="g5-gu">
-                                机芯稳定性、精度、动力储存全面提升 力洛克T41.1.483.33完美升级版<span class="know_more">了解更多>></span>
+                            <a href="" class="showU">机芯稳定性、精度、动力储存全面提升 力洛克T41.1.483.33完美升级版<span class="know_more">了解更多>></span>
                             </a>
-                            <div class="g5-line"></div>
-                            <div id="g5-pz" class="g5-f g5-pz">
-                                <div class="tt" id="g5_price_title">万表价</div>
-                                <div id="g5_price" class="wb">
-                                    ￥<b></b>
+                            <div class="line"></div>
+                            <div class="msg_part1">
+                                <div class="price_title">万表价</div>
+                                <div id="price">
+                                    ￥<b>6456</b>
                                 </div>
-                                <div class="g5-need-points" id="g5_need_points"></div>
-                                <div id="g5_market_price" class="mkt hide">
-                                    <del></del>
+                                <div id="market_price">
+                                    <del>￥4656</del>
                                 </div>
-                                <div id="g5_discount" class="dct hide"></div>
-                                <a href="javascript:" id="g5-dep-pop" class="pn" name="__AD_detail_click_1.1">(降价通知)</a>
-                                <div id="g5_prepay_separate" class="sep" style="display:none;"></div>
+                                <div id="discount">7.5折</div>
+                                <a href="javascript:">(降价通知)</a>
+                                <!-- <div id="g5_prepay_separate" class="sep" style="display:none;"></div>
                                 <div id="g5-prepay-txt" class="not pp" style="display:none;">
                                     预付定金
                                     <i class="red">
                                         ￥<b>0</b>
                                     </i>
-                                </div>
+                                </div> -->
                                 <div id="g5_save_price_separate" class="sep hide"></div>
                                 <div class="clear"></div>
-                                <a href="javascript:;" id="g5_fenqi" name="__AD_detail_click_1.2" class="cs pc_to_ntalk">
-                                    ￥383×12期&nbsp;&nbsp;<i class="gp5-cci"></i>
-                                    <span class="gp5-free">分期0利息</span>
+                                <a href="javascript:;" id="fenqi">
+                                    <span>￥</span>383 <span class="qinum">×12&nbsp;期&nbsp;&nbsp;</span>
+                                    <i class="card"></i>
+                                    <span class="free">分期0利息</span>
                                 </a>
-                                <div id="g5_remain_time_separate" class="sep" style="display:none;"></div>
-                                <div id="g5_remain_time" class="rt hide">
-                                    <i class="gp5-clock"></i>
-                                    <span>闪购剩余时间：</span>
-                                    <span class="qb-time" id="CountDown" data-config=""></span>
-                                </div>
                             </div>
                             <div class="clear"></div>
-                            <div id="g5_activity_tips_container" class="g5-f g5-so">
-                                <div class="tt">优惠</div>
-                                <a id="g5_activity_tips_link" name="__AD_detail_click_2.1" href="" class="des hide" target="_blank"></a>
-                                <a href="javascript:void(0)" name="__AD_detail_click_2.2_morediscount">
-                                    <span class="click_yh pc_to_ntalk">点击咨询，领取优惠>></span>
+                            <div class="msg_part2">
+                                <div class="youhui">优惠</div>
+                                <a href="" target="_blank" class="youhui_link">6月大促，部分品牌每满1000减100！</a>
+                                <a href="javascript:void(0)">
+                                    <span class="dianji">点击咨询，领取优惠>></span>
                                 </a>
-                                <a href="" id="ld" name="__AD_detail_click_2.2_checkdetail" class="ld hide" target="_blank">查看详细&gt;&gt;</a>
-                                <div id="mi" class="mi hide">
-                                    <div class="top">
-                                        <i class="gp5-tp"></i>
-                                        更多优惠
-                                    </div>
-                                    <div id="g5_activity_tips_more" class="mid"></div>
-                                </div>
-                                <div id="g5_activity_tips_separate" class="sep hide"></div>
-                                <div id="pro_dgift" class="pro_dgift hide">
-                                    <i class="pro_dadd">+</i>
-                                    <span class="pro_dtext">赠品</span>
-                                    <a href="#" class="pro_dpro">
-                                        <img src="https://image2.wbiao.co/goods/d/201504/28/3130_1SQ_42676.jpg" alt="精美礼品"/>
-                                    </a>
-                                    <span class="red">×1</span>
+                            </div>
+                            <div class="msg_part3">
+                                <div class="peisong">配送至</div>
+                                <div class="song">
+                                    <span class="y">中国大陆包邮，下单后16：45前支付，<i class="red">1-3个工作日到达</i><i class="red">支持货到付款</i></span>
                                 </div>
                             </div>
-                            <div class="clear"></div>
-                            <div id="g5_coupon" class="g5-f g5_coupon hide">
-                                <div class="tt">领券</div>
-                                <div class="not">
-                                    <ol class="cl"></ol>
-                                </div>
-                            </div>
-                            <div class="clear hide"></div>
-                            <div id="g5_delivery_info" class="g5-f g5-di hide">
-                                <div class="tt">配送至</div>
-                                <div class="not">
-                                    <span class="y"></span>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                            <div class="g5-f g5-fas">
-                                <div class="tt">款式</div>
-                                <div class="st">
-                                    <a href="javascript:void(0);" class="cur">
-                                        <i class="gp5-sel"></i>
-                                        <img class="lazy" src="//qd2.wbiao.co/img/unit/blank.gif" data-original="https://image2.wbiao.co/goods/d/201705/23/T006_407_11_033_00_83405.jpg" alt="">
+                            <div class="clean"></div>
+                            <div class="msg_part4">
+                                <div class="kuanshi">款式</div>
+                                <div class="kuanshi_pic">
+                                    <a href="javascript:void(0);">
+                                        <img src="../img/main/8155_26369.jpg">
                                     </a>
                                 </div>
                             </div>
                             <div class="clear"></div>
-                            <div class="g5-line"></div>
-                            <div id="g5_quantity" class="g5-f g5-num">
-                                <div class="tt">数量</div>
-                                <div class="gp5-ope">
-                                    <span class="minus" onclick="addorminus('minus','62520')"></span>
-                                    <input type="text" value="1" maxlength="4" class="num" name="goods_number" id="goods_number_62520">
-                                    <span class="add" onclick="addorminus('add','62520')"></span>
+                            <div class="line"></div>
+                            <div id="quantity">
+                                <div class="shuliang">数量</div>
+                                <div class="updown">
+                                    <span class="minus">-</span>
+                                    <input type="text" value="1" maxlength="4" class="num" name="goods_number">
+                                    <span class="add">+</span>
                                 </div>
-                                <div id="g5_sale_count" class="not">
+                                <div class="sale_out">
                                     有现货，已售&nbsp;<i class="red">1641</i>
                                     &nbsp;枚
                                 </div>
                             </div>
                             <div class="clear"></div>
+                            <div class="goumai">
+                                <a href="" id="ljgoumai">立即购买</a>
+                                <div id="jrcart">加入购物车</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clean"></div>
+                    <div class="history_buy">
+                        <h3>浏览该商品的顾客最终购买了</h3>
+                        <div class="prod_pic">
+                            <div class="pic_wrap">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <img src="../img/main/12642_61047.jpg" alt=""></img>
+                                            <div class="pic_txt">
+                                                <p class="name">天梭TISSOT-海星系列 T065.4...</p>
+                                                <p><span class="price">￥3712</span></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="../img/main/12642_61047.jpg" alt=""></img>
+                                            <div class="pic_txt">
+                                                <p class="name">天梭TISSOT-海星系列 T065.4...</p>
+                                                <p><span class="price">￥3712</span></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="../img/main/12642_61047.jpg" alt=""></img>
+                                            <div class="pic_txt">
+                                                <p class="name">天梭TISSOT-海星系列 T065.4...</p>
+                                                <p><span class="price">￥3712</span></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="../img/main/12642_61047.jpg" alt=""></img>
+                                            <div class="pic_txt">
+                                                <p class="name">天梭TISSOT-海星系列 T065.4...</p>
+                                                <p><span class="price">￥3712</span></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="../img/main/12642_61047.jpg" alt=""></img>
+                                            <div class="pic_txt">
+                                                <p class="name">天梭TISSOT-海星系列 T065.4...</p>
+                                                <p><span class="price">￥3712</span></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="../img/main/12642_61047.jpg" alt=""></img>
+                                            <div class="pic_txt">
+                                                <p class="name">天梭TISSOT-海星系列 T065.4...</p>
+                                                <p><span class="price">￥3712</span></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="" class="histry_more"><span>X</span>换一批</a>
+                        </div>
+                    </div>
+                    <div class="clean"></div>
+                    <div class="leftArea">
+                        <div class="hot">
+                            <div class="hot_top">
+                                <div class="hot_title">热销表款</div>
+                            </div>
+                            <div class="hot_list">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <img src="../img/main/T055_417_16_017_01_15219.jpg" alt="">
+                                            <div class="h_list_txt">
+                                                <p style="margin-top: 28px;">天梭</p>
+                                                <p style="height: 15px; overflow: hidden;">PRC 200</p>
+                                                <p style="height: 30px; overflow: hidden;width: 86px;">表</p>
+                                                <p style="margin-top: 10px;" class="red">￥2237</p>
+                                                <p><del>3550</del></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="../img/main/T055_417_16_017_01_15219.jpg" alt="">
+                                            <div class="h_list_txt">
+                                                <p style="margin-top: 28px;">天梭</p>
+                                                <p style="height: 15px; overflow: hidden;">PRC 200</p>
+                                                <p style="height: 30px; overflow: hidden;width: 86px;">表</p>
+                                                <p style="margin-top: 10px;" class="red">￥2237</p>
+                                                <p><del>3550</del></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="../img/main/T055_417_16_017_01_15219.jpg" alt="">
+                                            <div class="h_list_txt">
+                                                <p style="margin-top: 28px;">天梭</p>
+                                                <p style="height: 15px; overflow: hidden;">PRC 200</p>
+                                                <p style="height: 30px; overflow: hidden;width: 86px;">表</p>
+                                                <p style="margin-top: 10px;" class="red">￥2237</p>
+                                                <p><del>3550</del></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="../img/main/T055_417_16_017_01_15219.jpg" alt="">
+                                            <div class="h_list_txt">
+                                                <p style="margin-top: 28px;">天梭</p>
+                                                <p style="height: 15px; overflow: hidden;">PRC 200</p>
+                                                <p style="height: 30px; overflow: hidden;width: 86px;">表</p>
+                                                <p style="margin-top: 10px;" class="red">￥2237</p>
+                                                <p><del>3550</del></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="../img/main/T055_417_16_017_01_15219.jpg" alt="">
+                                            <div class="h_list_txt">
+                                                <p style="margin-top: 28px;">天梭</p>
+                                                <p style="height: 15px; overflow: hidden;">PRC 200</p>
+                                                <p style="height: 30px; overflow: hidden;width: 86px;">表</p>
+                                                <p style="margin-top: 10px;" class="red">￥2237</p>
+                                                <p><del>3550</del></p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="same">
+                            <div class="hot_top">
+                                <div class="hot_title">同档次其他品牌</div>
+                            </div>
+                            <div class="same_txt">
+                                <a href="">浪琴</a>
+                                <a href="">浪琴</a>
+                                <a href="">浪琴</a>
+                                <a href="">浪琴</a>
+                                <a href="">浪琴</a>
+                                <a href="">浪琴</a>
+                            </div>
+                        </div>
+                        <div class="hot_banner"><a href=""><img src="../img/main/148357763520360.jpg" alt=""></a></div>
+                        <div class="hot_banner"><a href=""><img src="../img/main/148357763520360.jpg" alt=""></a></div>
+                        <div class="viewed">
+                            <div class="hot_top">
+                                <div class="hot_title" style="border-bottom: 1px solid #ccc;">你最近浏览过的商品</div>
+                            </div>
+                            <div class="viewed_pic">
+                                <ul>
+                                    <li><a href=""><img src="../img/main/17001_B08_50568.jpg" alt=""></a></li>
+                                    <li><a href=""><img src="../img/main/17001_B08_50568.jpg" alt=""></a></li>
+                                    <li><a href=""><img src="../img/main/17001_B08_50568.jpg" alt=""></a></li>
+                                    <li><a href=""><img src="../img/main/17001_B08_50568.jpg" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="qrcord">
+                            <img src="../img/main/guan_zhu_wen_xin.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="rightArea"></div>
+                </div>
+            </div>
+                            <!--<div class="clear"></div>
                             <div id="buttons" class="g5-f g5-gbtn">
                                 <a rel="nofollow" name="__AD_detail_click_online_3.1" onclick="" class="g5-btn gp5-rbtn" id="add_to_cart">\u7acb\u5373\u8d2d\u4e70</a>
                                 <a rel="nofollow" id="real_buy_now" class="fancybox.iframe iframe" href="/u/pop_login?from=buy_now" style="display:none;">\u68c0\u67e5\u767b\u5f55</a>
@@ -232,8 +374,8 @@
                                 <!-- <a rel="nofollow" class="add-cart hide" id="g5-add-cart" name="__AD_detail_click_3.2" onclick="javascript:var gn=$('#goods_number_62520').val();addToCartT(62520,gn,1);">
                                     <i class="gp5-cart"></i>
                                     \u52a0\u5165\u8d2d\u7269\u8f66
-                                </a> -->
-                                <div class="g5-prs hide" id="g5-prs">
+                                </a>
+                              <!--   <div class="g5-prs hide" id="g5-prs">
                                     <div id="__AD_detail_click_yushou_3.2" onclick="">预售流程</div>
                                 </div>
                             </div>
@@ -292,8 +434,8 @@
                                                     <dd>
                                                         <table>
                                                             <tr>
-                                                                <th>付订金至付尾款
-</td><td>30天内</td>
+                                                                <th>付订金至付尾款 -->
+<!-- </td><td>30天内</td>
 <td>60天内</td>
 <td>90天内</td>
 <td>91天以上</td>
@@ -336,8 +478,8 @@
     </table>
 </div>
 <div class="clear"></div>
-<div class="clear"></div>
-</div></div><div class="clear"></div>
+<div class="clear"></div> -->
+<!-- </div></div><div class="clear"></div>
 <div class="history_buy" id="history_buy">
     <h3>
         浏览该商品的顾客最终购买了<p></p>
@@ -410,7 +552,7 @@
                                                 </p>
                                                 <p class="input--nao">
                                                     <!--[if IE]><i class="psd_i psd_i3">请输入密码</i><![endif]-->
-                                                    <i class="clear_txt h"></i>
+                                                   <!--  <i class="clear_txt h"></i>
                                                     <input type="password" name="password" id="dl_upsd" class="input__field ti pwti pw required ti--nao" required/>
                                                     <label class="input__label input__label--nao">
                                                         <span class="input__label-content input__label-content--nao">密码</span>
@@ -492,17 +634,17 @@
                                         <span class="input__label-content input__label-content--nao">请输入6位数字验证码</span>
                                     </label>
                                 </p>
-                                <p class="input--nao">
+                                <p class="input--nao"> -->
                                     <!--[if IE]><i class="psd_i psd_i1">请设置密码</i><![endif]-->
-                                    <i class="clear_txt h"></i>
+                                   <!--  <i class="clear_txt h"></i>
                                     <input type="password" class="input__field ti ti--nao" id="password" name="password" value="" maxlength="100">
                                     <label class="input__label input__label--nao">
                                         <span class="input__label-content input__label-content--nao">请设置密码</span>
                                     </label>
                                 </p>
-                                <p class="input--nao">
+                                <p class="input--nao"> -->
                                     <!--[if IE]><i class="psd_i psd_i2">请再次输入密码</i><![endif]-->
-                                    <i class="clear_txt h"></i>
+                                 <!--    <i class="clear_txt h"></i>
                                     <input type="password" class="input__field ti ti--nao" id="confirm_password" name="confirm_password" value="" maxlength="100">
                                     <label class="input__label input__label--nao">
                                         <span class="input__label-content input__label-content--nao">请再次输入密码</span>
@@ -848,8 +990,8 @@
             <div class="psize">
                 当前表盘尺寸：
                 <span>
-                    <b class="psize_num"></b>
-                    mm
+                    <b class="psize_num"></b> -->
+                   <!--  mm
                 </span>
                 ，接近下面手模图（<span class="psize_num_m" style="color:#4b4a4a">40</span>
                 mm），另可摆放硬币位置，感知表盘大小
@@ -869,8 +1011,8 @@
             <p>
                 <img class="lazy" src="//qd2.wbiao.co/img/unit/blank.gif" data-original="//qd2.wbiao.co/img/5.0/goods/trash/pro_size45.jpg?20160317g"/>
             </p>
-        </div>
-        <div class="thick" id="thick">
+        </div> --> 
+<!--         <div class="thick" id="thick">
             <div class="psize">
                 当前表款厚度：
                 <span>
@@ -1579,7 +1721,7 @@
         </li>
         <li>
             <label class="comleft martop">晒单：</label>
-            <!-- <div class="comright">
+            <! <div class="comright">
                 <span class="pleft">
                     <div>
                         <div id="test" class="webuploader-container">
@@ -1593,7 +1735,7 @@
                 </span>
                 <span id="comment-img-feedback" class="feedbox"></span>
             </div> -->
-            <div class="clear"></div>
+            <!-- <div class="clear"></div>
             <p class="c_999_img" style="padding:10px 0 0 60px;">
                 <span class="isize" id="isize">0</span>
                 /10 &nbsp;&nbsp;（建议上传1M内大小的图片）
@@ -1846,8 +1988,8 @@
                     </a>
                 </li>
             </ul>
-        </div>
-        <div class="hide">
+        </div> -->
+ <!--        <div class="hide">
             <ul class="articles">
                 <li>
                     <a rel="nofollow" href="https://www.wbiao.cn/tissot-watches/knowledge/article-127281.html" target="_blank">天梭T085.410.16.013.00手表【表友晒单作业】手表到了，...</a>
@@ -2238,8 +2380,8 @@
         </div>
     </div>
 </div>
-</div>
-<div id="leftArea">
+</div> -->
+<!-- <div id="leftArea">
     <div class="hot">
         <div class="h_top">
             <div class="h_tit">热销表款</div>
@@ -2355,16 +2497,20 @@
 
 
 			</div>
-	
-	    </div>
+	</div> -->
+	  <!--   </div>
+ -->
 <!-- ******底部****** -->
     <div id="footer"></div>
+    <div id="goTop">Top</div>
 <script>
 	$(function () {
 		$("#header").load("include/index-header.html");
 		$("#main .nav").load("include/nav.html");
 		$("#footer").load("include/index-footer.html");
+        $("")
 	});
+
 </script>
 </body>
 </html>

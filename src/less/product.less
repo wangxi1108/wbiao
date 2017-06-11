@@ -1,8 +1,15 @@
 .pinpai_nav{
 	display: none!important;
 }
-.manin_warp{
+.clean{
+	clear: both;
+}
+#main{
+	background: url(../img/main/main-bg.png) repeat-x 0 42px;
+}
+.main_warp{
 	width: 1200px;
+	margin: 0 auto;
 }
 .currentshow{
 	width: 100%;
@@ -20,4 +27,475 @@
 	line-height: 18px;
 	font-size: 12px;
 	color: #999;
+}
+#goods{
+	width: 100%;
+	margin-top: 15px;
+	.goods_show{
+		.goods_pic{
+		width: 500px;
+		height: 633px;
+		background: red;
+		float: left;
+		}
+		.goods_msg{
+			width: 685px;
+			height: 456px;
+			float: right;
+			.prod_name{
+				color: #000;
+			    font-weight: bold;
+			    font-size: 20px;
+			    line-height: 24px;
+			    max-height: 48px;
+			    overflow: hidden;
+		        margin-bottom: 6px;
+			}
+			.prod_xbp{
+				margin-top: 15xp;
+				dl{
+					font-size: 12px;
+					float: left;
+					margin-right: 50px;
+					dt{
+						color: #999;
+					    float: left;
+					    margin-right: 5px;
+					}
+					dd{
+						color: #323232;
+    					float: left;
+					}
+				}
+			}
+			.showU{
+				color: #b01330;
+			    margin-top: 15px;
+			    font-size: 14px;
+			    line-height: 20px;
+			    font-weight: bold;
+			    overflow: hidden;
+			    max-height: 38px;
+			    display: inline-block;
+			}
+			.line{
+				border-top: 1px dashed #b1b1b1;
+			    height: 1px;
+			    margin: 15px 0 25px;
+			}
+			.msg_part1{
+				position: relative;
+			    margin: 20px 0 0 55px;
+			    font-size: 12px;
+			    color: #626262;
+			    .price_title{
+			    	position: absolute;
+				    left: -55px;
+				    top: 0;
+			    }
+			    #price{
+			    	font-size: 14px;
+				    position: relative;
+				    top: -10px;
+				    color: #191919;
+				    float: left;
+				    b{
+				    	font-size: 28px;
+				    }
+			    }
+			    #market_price{
+			    	margin-left: 10px;
+    				float: left;
+    				del{
+    					text-decoration: line-through;
+    				}
+			    }
+			    #discount{
+			    	margin-left: 5px;
+				    float: left;
+				    border-left: 2px solid #999;
+				    padding-left: 5px;
+			    }
+			    #fenqi{
+			    	display: inline-block;
+			   	    float: left;
+				    color: #b01330;
+				    font-size: 20px;
+				    font-weight: bold;
+				    .qinum{
+				    	font-size: 16px;
+   						font-weight: normal;
+				    }
+				    .card{
+						width: 15px;
+						    background: url(../img/main/goods.png?20150826) 100px 100px no-repeat;
+					    height: 11px;
+					    background-position: -27px 0;
+					    display: inline-block;
+					    margin-right: 8px;
+					    vertical-align: bottom;
+				    }
+				    .free{
+				    	color: #1e558d;
+					    text-decoration: underline;
+					    font-size: 12px;
+					    font-weight: normal;
+				    }
+			    }
+			}
+			.msg_part2{
+				position: relative;
+			    margin: 35px 0 0 55px;
+			    font-size: 12px;
+			    color: #626262;
+			    .youhui{
+			    	position: absolute;
+				    left: -55px;
+				    top: 0;
+			    }
+			    .youhui_link{
+			    	color: #333;
+				    line-height: 14px;
+				    float: left;
+				    display: block;
+			    }
+			    .dianji{
+			    	color: #b01330;
+				    padding-left: 15px;
+				    text-decoration: underline;
+			    }
+			}
+			.msg_part3{
+				position: relative;
+			    margin: 20px 0 0 55px;
+			    font-size: 12px;
+			    color: #626262;
+			    .peisong{
+			    	position: absolute;
+				    left: -55px;
+				    top: 0;
+			    }
+			    span{
+			    	font-size: 12px;
+				    color: #666666;
+				    padding-right: 5px;
+				    .red{
+				    	color: #b01330!important;
+				    }
+			    }
+			}
+			.msg_part4{
+				position: relative;
+			    margin: 20px 0 0 55px;
+			    font-size: 12px;
+			    color: #626262;
+		        margin-bottom: 25px;
+		        .kuanshi{
+		        	position: absolute;
+		        	top: 20px;
+    				left: -55px;
+		        }
+		        .kuanshi_pic{
+		        	height: 50px;
+		        	a{
+		        		float: left;
+					    margin-right: 20px;
+					    border: 1px solid #fff;
+					    position: relative;
+					    width: 48px;
+					    height: inherit;
+					    img{
+					    	height: 48px;
+					    }
+		        	}
+		        }
+			}
+			#quantity{
+				margin-top: 30px;
+				position: relative;
+			    margin: 20px 0 0 55px;
+			    font-size: 12px;
+			    color: #626262;
+			    .shuliang{
+			    	position: absolute;
+				    left: -55px;
+				    top: 0;
+				    }
+				.updown{
+						width: 120px;
+					    height: 22px;
+					    float: left;
+					    background-position: 0 -48px;
+					    margin-right: 20px;
+					    position: relative;
+					    top: -5px;
+					    .minus{
+					    	display: block;
+					     	width: 22px;
+						    height: inherit;
+						    float: left;
+						    border: 1px solid;
+					    }
+					    .num{
+					    	width: 50px;
+						    height: 20px;
+						    margin: 1px 0;
+						    float: left;
+						    border: 0;
+						    text-align: center;
+						    background-color: white;
+						    user-select: text;
+						    cursor: auto;
+						     border: 1px solid;
+					    }
+					    .add{
+					    	display: block;
+							width: 22px;
+						    height: inherit;
+						    float: left;
+						     border: 1px solid;
+					    }
+			    }
+			    .sale_out{
+					.red{
+					 	color: #b01330!important;
+					}
+				}
+			}
+			.goumai{
+				position: relative;
+			    margin: 20px 0 0 55px;
+			    font-size: 12px;
+			    color: #626262;
+			    #ljgoumai{
+					float: left;
+				    width: 175px;
+				    height: 45px;
+				    line-height: 45px;
+				    text-align: center;
+				    color: #fff;
+				    font-weight: bold;
+				    font-size: 18px;
+				    margin-right: 20px;
+				    background: url(../img/main/goods.png) 100px 100px no-repeat;
+				        background-position: 0 -71px;
+			    }
+			    #jrcart{
+					color: #656565;
+				    border: 1px solid #ccc;
+				    width: 140px;
+				    height: 43px;
+				    line-height: 43px;
+				    float: left;
+				    text-align: center;
+				    font-weight: bold;
+			    }
+			}
+		}
+	}
+	.history_buy{
+		width: 100%;
+		height: 289px;
+		margin-top: 30px;
+		border: 1px solid #ddd;
+		overflow: hidden;
+		h3{
+			color:#ae0d15;
+			font-size: 14px;
+			background: #f9f9f9;
+			padding: 10px 20px;
+			position: relative;
+		}
+		.prod_pic{
+			width: 100%;
+			margin-top: 4px;
+			float: left;
+			background: #fff;
+			position: relative;
+			.pic_wrap{
+				width: 1178px;
+				a{
+					width: 160px;
+					float: left;
+					text-align: center;
+					margin: 10px 0;
+					padding: 0 12px;
+					img{
+						width: 160px;
+						height: 160px;
+						display: block;
+						margin:0 auto;
+					}
+					.pic_txt{
+						padding: 10px 5px 0 5px;
+						overflow: hidden;
+						.name{
+							padding-bottom: 5px;
+							text-align: left;
+							color: #333;
+							font-size: 12px;
+						}
+						span{
+							color: #bb112b;
+							font-size: 12px;
+							padding-right: 5px;
+						}
+					}
+				}
+			}
+			.histry_more{
+				color: #333;
+				font-size: 14px;
+				position: absolute;
+				top: 40%;
+				right: 20px;
+				float: left;
+				line-height: 15px;
+			}
+		}
+	}
+	.leftArea{
+		float: left;
+		width: 230px;
+		height: 2000px;
+		margin-top: 30px;
+		.hot{
+			width: 208px;
+			border: 1px solid #ddd;
+			border-top: 2px solid #333;
+			margin-bottom: 20px;
+			overflow: hidden;
+			clear: both;
+			.hot_list{
+				padding-bottom: 20px;
+				li{
+					a{
+						position: relative;
+						width: 100%;
+						height: 130px;
+						margin-top: 20px;
+						display: block;
+						color: #868686;
+						img{
+							width: 130px;
+							height: 130px;
+							z-index: 1;
+							position: absolute;
+							top: 0;
+							left: 0;
+						}
+						.h_list_txt{
+							width: 86px;
+							position: absolute;
+							top: 0;
+							right: 0;
+							z-index: 2;
+							background: #fff;
+							padding-left: 5px;
+							p{
+								font-size: 12px;
+								width: 108px;
+								line-height: 15px;
+								del{
+									color: #666!important;
+								}
+							}
+							.red{
+									color: #b01330!important;
+									font-size: 14px!important;
+									font-weight: bold;
+								}
+						}
+					}
+				}
+			}
+		}
+		.same{
+			width: 208px;
+			border: 1px solid #ddd;
+			border-top: 2px solid #333;
+			overflow: hidden;
+			clear: both;
+			margin-bottom: 20px;
+			.same_txt{
+				padding: 10px;
+				a{
+					display: inline-block;
+					height: 28px;
+					line-height: 28px;
+					width: 31%;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+					font-size: 12px;
+				}
+			}
+		}
+		.hot_banner{
+			margin-bottom: 10px;
+		}
+		.viewed{
+			width: 208px;
+			border-left: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+		    border-top: 2px solid #333;
+		    border-bottom: 0;
+		    overflow: hidden;
+		    clear: both;
+		    margin-bottom: 20px;
+		    .viewed_pic{
+		    	li{
+		    		float: left;
+		    		width: 103px;
+		    		height: 103px;
+		    		overflow: hidden;
+		    		text-align: center;
+		    		vertical-align: middle;
+		    		border-right: 1px solid #ccc;
+		    		border-bottom: 1px solid #ccc;
+		    		a{
+		    			position: relative;
+		    			display: block;
+		    			width: 103px;
+		    			height: 103px;
+		    			overflow: hidden;
+		    			color: #999;
+		    			img{
+		    				margin: 10px;
+		    			}
+		    		}
+		    	}
+		    }
+		}
+		.qrcord{
+		 	width: 208px;
+		    border: 1px solid #ddd;
+		    border-top: 2px solid #333;
+		    overflow: hidden;
+		    clear: both;
+		    margin-bottom: 20px;
+		    img{
+		    	width: 210px;
+		    	height: 246px;
+		    	display: block;
+		    }
+		}
+	}
+	.rightArea{
+		float: right;
+		margin-top: 30px;
+		width: 970px;
+		height: 4000px;
+		background: purple;
+	}
+}
+.hot_top{
+	background: #f9f9f9;
+	height: 33px;
+	line-height: 33px;
+	text-indent: 10px;
+	.hot_title{
+		font-size: 14px;
+		font-weight: bold;
+	}
 }

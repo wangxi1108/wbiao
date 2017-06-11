@@ -1,12 +1,17 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>万表网【官网】：值得信任的正品名表商城！买手表，上万表！</title><link rel="stylesheet" href="../css/public.css"><link rel="stylesheet" href="../css/common.css"><link href="../css/index.css" rel="stylesheet"><script src="../libs/jquery-1.12.4.min.js"></script><script src="../libs/template-native.js"></script><script src="../js/index.js"></script></head><body><div id="header"></div><div id="main"><div class="nav"></div><div class="main_banner"><ul><li style="background:#0b0b0b;display:block"><a href=""><img src="../img/main/149265388253912.png" alt=""></a></li><li style="background:#04050a"><a href=""><img src="../img/main/149268395670817.jpg" alt=""></a></li><li style="background:#fae1c3"><a href=""><img src="../img/main/149371869237429.jpg" alt=""></a></li><li style="background:#e4e4e4"><a href=""><img src="../img/main/149482325840606.png" alt=""></a></li><li style="background:#000"><a href=""><img src="../img/main/149482838654844.jpg" alt=""></a></li><li style="background:#000"><a href=""><img src="../img/main/149516547130414.png" alt=""></a></li><li style="background:#fcfcfc"><a href=""><img src="../img/main/149518956197228.jpg" alt=""></a></li><li style="background:#0d0d0d"><a href=""><img src="../img/main/149570828378645.jpg" alt=""></a></li><div class="prnt"><div id="prev"></div><div id="next"></div></div></ul><p id="pages"></p></div><div id="floor"><div class="floor_wel"><ul><li><a href=""><span></span>自营正品直采</a></li><li><a href=""><span></span>专业腕表导购</a></li><li><a href=""><span></span>全国实体店体验</a></li><li><a href=""><span></span>专业保养维修</a></li></ul></div><div class="floor_showpic"></div><div class="floor_style_1"></div><div class="floor_style_2"></div><div class="floor_style_3"></div><div class="floor_style_4"></div><div class="floor_style_5"></div></div><div id="footer"></div><script type="text/html" id="art_showpic"> <% for(var i = 0,len=list.length; i< 1 ; i++){
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>万表网【官网】：值得信任的正品名表商城！买手表，上万表！</title><link rel="stylesheet" href="../css/public.css"><link rel="stylesheet" href="../css/common.css"><link href="../css/index.css" rel="stylesheet"><script src="../libs/jquery-1.12.4.min.js"></script><script src="../libs/template-native.js"></script></head><body><div id="header"></div><div id="main"><div class="nav"></div><div class="main_banner"><ul><li style="background:#0b0b0b;display:block"><a href=""><img src="../img/main/149265388253912.png" alt=""></a></li><li style="background:#04050a"><a href=""><img src="../img/main/149268395670817.jpg" alt=""></a></li><li style="background:#fae1c3"><a href=""><img src="../img/main/149371869237429.jpg" alt=""></a></li><li style="background:#e4e4e4"><a href=""><img src="../img/main/149482325840606.png" alt=""></a></li><li style="background:#000"><a href=""><img src="../img/main/149482838654844.jpg" alt=""></a></li><li style="background:#000"><a href=""><img src="../img/main/149516547130414.png" alt=""></a></li><li style="background:#fcfcfc"><a href=""><img src="../img/main/149518956197228.jpg" alt=""></a></li><li style="background:#0d0d0d"><a href=""><img src="../img/main/149570828378645.jpg" alt=""></a></li><div class="prnt"><div id="prev"></div><div id="next"></div></div></ul><p id="pages"></p></div><div id="floor"><ul id="cebiannav"><li class="active">热销</li><li>闪购</li><li>新品</li><li>品牌</li><li>猜你<br>喜欢</li><li>晒单</li><li>咨讯</li></ul><div id="goTop">Top</div><div class="floor_wel"><ul><li><a href=""><span></span>自营正品直采</a></li><li><a href=""><span></span>专业腕表导购</a></li><li><a href=""><span></span>全国实体店体验</a></li><li><a href=""><span></span>专业保养维修</a></li></ul></div><div class="floor_showpic"></div><div class="floor_style_1"></div><div class="floor_style_2"></div><div class="floor_style_3"></div><div class="floor_style_4"></div><div class="floor_style_5"></div></div></div><div id="footer"></div><script type="text/html" id="art_showpic"> <% for(var i = 0,len=list.length; i< 1 ; i++){
 		var showpic=list[0]; %> <ul>
 			<li><a href="#"><img src="../img/main/<%=showpic.img[0]%>.jpg"></a></li>
 			<li><a href="#"><img src="../img/main/<%=showpic.img[1]%>.jpg"></a></li>
 			<li><a href="#"><img src="../img/main/<%=showpic.img[2]%>.jpg"></a></li>
 			<li><a href="#"><img src="../img/main/<%=showpic.img[3]%>.jpg"></a></li>
-		</ul> <%}%> </script><script type="text/html" id="art_style_1"> <% for (var i = 1, len = list.length; i < 4; i++){
+		</ul>
+		<p>
+			<span></span>
+			<span></span>
+		</p> <%}%> </script><script type="text/html" id="art_style_1"> <% for (var i = 1, len = list.length; i < 4; i++){
 		var floor = list[i];
-	%> <div class="floormean">
+	%> <div class="louceng">
+		<div class="floormean">
 			<h3><a href=""><%= floor.h3 %><span></span></a></h3>
 			<p>
 				<a href=""><%= floor.top_txt[0] %></a><span>/</span>
@@ -16,13 +21,16 @@
 		</div>
 		<div class="floorshow">
 			<div class="show_part1">
-				<ul>
-					<li><img src="../img/main/<%= floor.part1_img[0] %>.jpg"></li>
-					<li><img src="../img/main/<%= floor.part1_img[1] %>.jpg"></li>
-					<li><img src="../img/main/<%= floor.part1_img[2] %>.jpg"></li>
-					<!-- <li><img src="../img/main/<%= floor.part1_img[3] %>.png"></li> -->
-				</ul>
-				<div>
+				<ul >
+					<li class="<%=floor.class%>"><img src="../img/main/<%= floor.part1_img[0] %>.jpg"></li>
+					<li class="<%=floor.class%>"><img src="../img/main/<%= floor.part1_img[1] %>.jpg"></li>
+					<li class="<%=floor.class%>"><img src="../img/main/<%= floor.part1_img[2] %>.jpg"></li>
+					<li class="<%=floor.class%>"><img src="../img/main/<%= floor.part1_img[3] %>.jpg"></li>
+					<div id="<%=floor.prnt[0]%>" class="prev"></div>
+					<div id="<%=floor.prnt[1]%>" class="next"></div>
+	    		</ul>
+    		<p id="<%=floor.p_class%>" class="pages"></p>
+				<div class="part1_txt">
 					<p><%= floor.part1_txt[0] %></p>
 					<p><%= floor.part1_txt[1] %></p>
 				</div>
@@ -87,9 +95,11 @@
 					<li><a href=""><img src="../img/main/<%= floor.part4_img[5] %>.png" alt=""><span><%= floor.part4_txt[5] %></span></a></li>
 				</ul>
 			</div>
+		</div>
 		</div> <% } %> </script><script type="text/html" id="art_style_2"> <% for (var i = 4, len = list.length; i < 5; i++){
 		var floor2 = list[4];
-	%> <div class="floormean">
+	%> <div class="louceng">
+		<div class="floormean">
 			<h3><a href=""><%=floor2.h3%><span></span></a></h3>
 			<p>
 				<a href=""><%=floor2.top_txt%></a><span>></span>
@@ -170,8 +180,10 @@
 					</dd>
 				</a>
 			</dl>
+		</div>
 		</div> <% } %> </script><script type="text/html" id="art_style_3"> <% for(var i = 5,len=list.length; i< 6 ; i++){
-		var floor3=list[5]; %> <div class="floormean">
+		var floor3=list[5]; %> <div class="louceng">
+		<div class="floormean">
 			<h3><a href=""><%=floor3.h3%><span></span></a></h3>
 			<p><span>X</span><a href=""><%=floor3.top_txt%></a></p>
 		</div>
@@ -179,7 +191,7 @@
 			<div class="like-l">
 				<ul>
 					<li><a href=""><img src="../img/main/<%=floor3.logo_img[0]%>.png" alt=""></a></li>
-					<li><a href=""><img src="../img/main/<%=floor3.logo_img[1]%>.png" alt=""></li>
+					<li><a href=""><img src="../img/main/<%=floor3.logo_img[1]%>.png" alt=""></a></li>
 					<li><a href=""><span><%=floor3.logo_txt[0]%></span></a></li>
 					<li><a href=""><span><%=floor3.logo_txt[1]%></span></a></li>
 					<li><a href=""><span><%=floor3.logo_txt[2]%></span></a></li>
@@ -226,8 +238,10 @@
 					</a>
 				</dl>
 			</div>
+		</div>
 		</div> <%}%> </script><script type="text/html" id="art_style_4"> <% for(var i = 6,len=list.length; i< 7 ; i++){
-		var floor4=list[6]; %> <div class="floormean">
+		var floor4=list[6]; %> <div class="louceng">
+		<div class="floormean">
 			<h3><a href=""><%=floor4.h3%><span></span></a></h3>
 			<p>
 				<a href=""><%=floor4.top_txt%></a><span>></span>
@@ -258,12 +272,13 @@
 					<dd><%=floor4.txt[3]%></dd>
 				</a>
 			</dl>
+		</div>
 		</div> <%}%> </script><script type="text/html" id="art_style_5"> <% for(var i = 7,len=list.length; i< 8 ; i++){
-			var floor5=list[7]; %> <div id="floor_left">
+			var floor5=list[7]; %> <div class="louceng">
+			<div id="floor_left">
 				<div class="floormean">
 					<h3><a href=""><%=floor5.h3[0]%><span></span></a></h3>
-					<div>
-						<a href=""><img src="../img/main/<%=floor5.left_img[0]%>.png" alt=""></a>
+					<a href=""><img src="../img/main/<%=floor5.left_img[0]%>.png" alt=""></a>
 						<p>
 							<a href=""><%=floor5.left_txt[0]%></a>
 							<a href=""><%=floor5.left_txt[1]%></a>
@@ -272,13 +287,11 @@
 							<a href=""><%=floor5.left_txt[4]%></a>
 							<a href=""><%=floor5.left_txt[5]%></a>
 						</p>
-					</div>
-
 				</div>
 			</div>
 			<div id="floor_right">
 				<div class="floormean">
-					<h3><a href=""><%=floor5.h3[0]%><span></span></a></h3>
+					<h3><a href=""><%=floor5.h3[1]%><span></span></a></h3>
 					<p>
 						<a href=""><%=floor5.top_txt%></a><span>></span>
 					</p>
@@ -309,4 +322,5 @@
 						<dd><a href=""><%=floor5.xueyuan[4]%></a></dd>
 					</dl>
 				</div>
-			</div> <%}%> </script><script>$(function(){$("#header").load("include/index-header.html"),$("#main .nav").load("include/nav.html"),$("#footer").load("include/index-footer.html"),$.getJSON("../data/floor.json",function(e){var t={list:e},a=template("art_showpic",t);$(".floor_showpic").append(a);var l=template("art_style_1",t);$(".floor_style_1").append(l);var o=template("art_style_2",t);$(".floor_style_2").append(o);var r=template("art_style_3",t);$(".floor_style_3").append(r);var _=template("art_style_4",t);$(".floor_style_4").append(_);var p=template("art_style_5",t);$(".floor_style_5").append(p)})})</script></div></body></html>
+			</div>
+			</div> <%}%> </script><script>$(function(){$("#header").load("include/index-header.html"),$("#main .nav").load("include/nav.html"),$("#footer").load("include/index-footer.html"),$.getJSON("../data/floor.json",function(e){var t={list:e},a=template("art_showpic",t);$(".floor_showpic").append(a);var l=template("art_style_1",t);$(".floor_style_1").append(l);var o=template("art_style_2",t);$(".floor_style_2").append(o);var r=template("art_style_3",t);$(".floor_style_3").append(r);var _=template("art_style_4",t);$(".floor_style_4").append(_);var p=template("art_style_5",t);$(".floor_style_5").append(p)})})</script><script src="../js/index.js"></script></body></html>

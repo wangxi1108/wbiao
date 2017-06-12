@@ -32,11 +32,80 @@
   width: 100%;
   margin-top: 15px;
 }
-#goods .goods_show .goods_pic {
-  width: 500px;
-  height: 633px;
-  background: red;
+#goods .goods_show .show_left {
   float: left;
+  width: 500px;
+}
+#goods .goods_show .show_left .photo {
+  width: 500px;
+  height: 588px;
+  display: block;
+  position: relative;
+}
+#goods .goods_show .show_left .photo .goods_pic {
+  width: 500px;
+  float: left;
+}
+#goods .goods_show .show_left .photo .goods_pic .bshow {
+  width: 480px;
+  height: 480px;
+  text-align: center;
+  overflow: hidden;
+  display: block;
+  padding: 8px;
+  border: 1px solid #ddd;
+  position: relative;
+}
+#goods .goods_show .show_left .photo .goods_pic .bshow img {
+  width: 480px;
+  height: 480px;
+}
+#goods .goods_show .show_left .photo .goods_pic .simg {
+  width: inherit;
+  height: 75px;
+  margin-top: 15px;
+  position: relative;
+}
+#goods .goods_show .show_left .fun {
+  margin-top: 30px;
+  color: #666;
+}
+#goods .goods_show .show_left .fun #shoucang {
+  margin-right: 30px;
+  font-size: 12px;
+  float: left;
+}
+#goods .goods_show .show_left .fun #shoucang .shoucangicon {
+  display: block;
+  width: 15px;
+  height: 15px;
+  float: left;
+  background-position: -19px -29px;
+  position: relative;
+  top: -2px;
+  margin-right: 5px;
+  background: red url(../img/main/goods.png) 100px 100px no-repeat;
+}
+#goods .goods_show .show_left .fun #ilike {
+  font-size: 12px;
+  margin-right: 30px;
+  float: left;
+}
+#goods .goods_show .show_left .fun #ilike .xihuanicon {
+  font-style: normal;
+  color: #b01330;
+  width: 16px;
+  height: 15px;
+  float: left;
+  background-position: -15px -13px;
+  position: relative;
+  top: -2px;
+  margin-right: 5px;
+  background: red url(../img/main/goods.png) 100px 100px no-repeat;
+}
+#goods .goods_show .show_left .fun #ilike #peop_num {
+  font-style: normal;
+  color: #b01330;
 }
 #goods .goods_show .goods_msg {
   width: 685px;
@@ -290,6 +359,29 @@
   text-align: center;
   font-weight: bold;
 }
+#goods .goods_show .goods_msg .phone_pay {
+  position: relative;
+  float: left;
+  top: 10px;
+  color: #232323;
+  padding-left: 50px;
+  font-size: 13px;
+  cursor: pointer;
+  z-index: 1;
+}
+#goods .goods_show .goods_msg .phone_pay img {
+  vertical-align: middle;
+  padding: 0 4px 5px 0;
+}
+#goods .goods_show .goods_msg .phone_pay .i {
+  background: url(../img/main/xz_icon.png);
+  width: 5px;
+  height: 9px;
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.2s ease-out 0s;
+  padding: 0;
+}
 #goods .history_buy {
   width: 100%;
   height: 289px;
@@ -354,7 +446,6 @@
 #goods .leftArea {
   float: left;
   width: 230px;
-  height: 2000px;
   margin-top: 30px;
 }
 #goods .leftArea .hot {
@@ -478,8 +569,48 @@
   float: right;
   margin-top: 30px;
   width: 970px;
-  height: 4000px;
-  background: purple;
+}
+#goods .rightArea .rightTop {
+  width: 970px;
+  position: absolute;
+  border-top: 1px solid #ddd;
+  height: 50px;
+  background-color: #f2f2f2;
+  display: inline-block;
+  z-index: 3;
+}
+#goods .rightArea .rightTop ul {
+  font-size: 14px;
+  position: absolute;
+}
+#goods .rightArea .rightTop ul .on {
+  background: 0;
+  border-top: 2px solid #b01330;
+  border-bottom: 1px solid #fff;
+  background: #fff;
+  position: relative;
+  top: -1px;
+}
+#goods .rightArea .rightTop ul .on a {
+  color: #b01330;
+  height: 48px;
+  line-height: 50px;
+  border-bottom: 1px solid #fff;
+}
+#goods .rightArea .rightTop ul li {
+  width: 120px;
+  text-align: center;
+  border-left: 1px solid #ddd;
+  background-color: #f2f2f2;
+  float: left;
+}
+#goods .rightArea .rightTop ul li a {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  color: #000;
+  border-bottom: 1px solid #f2f2f2;
 }
 .hot_top {
   background: #f9f9f9;
@@ -490,4 +621,18 @@
 .hot_top .hot_title {
   font-size: 14px;
   font-weight: bold;
+}
+.thumbnails li {
+  float: left;
+}
+.thumbnails li a {
+  display: block;
+  width: 73px;
+  height: 73px;
+  margin: 1px;
+  overflow: hidden;
+}
+.thumbnails li a img {
+  width: 100%;
+  height: 100%;
 }

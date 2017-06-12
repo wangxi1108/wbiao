@@ -32,11 +32,80 @@
 	width: 100%;
 	margin-top: 15px;
 	.goods_show{
-		.goods_pic{
-		width: 500px;
-		height: 633px;
-		background: red;
-		float: left;
+		.show_left{
+			float: left;
+			width: 500px;
+			.photo{
+				width: 500px;
+				height: 588px;
+			    display: block;
+			    position: relative;
+				.goods_pic{
+					width: 500px;
+					float: left;
+					.bshow{
+						width: 480px;
+					    height: 480px;
+					    text-align: center;
+					    overflow: hidden;
+					    display: block;
+					    padding: 8px;
+					    border: 1px solid #ddd;
+					    position: relative;
+					    img{
+					    	width: 480px;
+					    	height: 480px;
+					    }
+					}
+					.simg{
+						width: inherit;
+					    height: 75px;
+					    margin-top: 15px;
+					    position: relative;
+					}
+				}
+			}
+			.fun{
+				margin-top: 30px;
+	    		color: #666;
+	    		#shoucang{
+					margin-right: 30px;
+					font-size: 12px;
+	    			float: left;
+	    			.shoucangicon{
+	    				display: block;
+	    				width: 15px;
+					    height: 15px;
+					    float: left;
+					    background-position: -19px -29px;
+					    position: relative;
+					    top: -2px;
+					    margin-right: 5px;
+					    background: red url(../img/main/goods.png) 100px 100px no-repeat;
+	    			}
+	    		}
+	    		#ilike{
+	    			font-size: 12px;
+	    			margin-right: 30px;
+	    			float: left;
+	    			.xihuanicon{
+	    				font-style: normal;
+	    				color: #b01330;
+	    				width: 16px;
+					    height: 15px;
+					    float: left;
+					    background-position: -15px -13px;
+					    position: relative;
+					    top: -2px;
+					    margin-right: 5px;
+					    background: red url(../img/main/goods.png) 100px 100px no-repeat;
+	    			}
+	    			#peop_num{
+	    				font-style: normal;
+	    				color: #b01330;
+	    			}
+	    		}
+			}
 		}
 		.goods_msg{
 			width: 685px;
@@ -291,6 +360,29 @@
 				    font-weight: bold;
 			    }
 			}
+			.phone_pay{
+				position: relative;
+			    float: left;
+			    top: 10px;
+			    color: #232323;
+			    padding-left: 50px;
+			    font-size: 13px;
+			    cursor: pointer;
+			    z-index: 1;
+			    img{
+			        vertical-align: middle;
+    				padding: 0 4px 5px 0;
+			    }
+			   	.i {
+			    	background: url(../img/main/xz_icon.png);
+				    width: 5px;
+				    height: 9px;
+				    display: inline-block;
+				    margin-left: 5px;
+				    transition: transform .2s ease-out 0s;
+				    padding: 0;
+			    }
+			}
 		}
 	}
 	.history_buy{
@@ -357,7 +449,6 @@
 	.leftArea{
 		float: left;
 		width: 230px;
-		height: 2000px;
 		margin-top: 30px;
 		.hot{
 			width: 208px;
@@ -485,8 +576,49 @@
 		float: right;
 		margin-top: 30px;
 		width: 970px;
-		height: 4000px;
-		background: purple;
+		.rightTop{
+			width: 970px;
+			position: absolute;
+		    border-top: 1px solid #ddd;
+		    height: 50px;
+		    background-color: #f2f2f2;
+		    display: inline-block;
+		    z-index: 3;
+		    ul{
+		    	font-size: 14px;
+    			position: absolute;
+    			.on{
+    				background: 0;
+				    border-top: 2px solid #b01330;
+				    border-bottom: 1px solid #fff;
+				    background: #fff;
+				    position: relative;
+				    top: -1px;
+				    a{
+				    	color: #b01330;
+					    height: 48px;
+					    line-height: 50px;
+					    border-bottom: 1px solid #fff;
+				    }
+    			}
+    			li{
+    				width: 120px;
+				    text-align: center;
+				    border-left: 1px solid #ddd;
+				    background-color: #f2f2f2;
+				    float: left;
+				    a{
+				    	width: 100%;
+					    height: 50px;
+					    line-height: 50px;
+					    display: inline-block;
+					    color: #000;
+					    border-bottom: 1px solid #f2f2f2;
+				    }
+    			}
+		    }
+		}
+
 	}
 }
 .hot_top{
@@ -497,5 +629,19 @@
 	.hot_title{
 		font-size: 14px;
 		font-weight: bold;
+	}
+}
+.thumbnails li{
+	float: left;
+	a{
+		display: block;
+		width: 73px;
+	    height: 73px;
+	    margin: 1px;
+	    overflow: hidden;
+		img{
+			width: 100%;
+			height: 100%;
+		}
 	}
 }

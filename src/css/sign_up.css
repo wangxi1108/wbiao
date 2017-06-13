@@ -46,7 +46,6 @@
 	line-height: 38px;
 	margin: 15px auto 0;
 	position: relative;
-	overflow: hidden;
 }
 #main #sign_up .sign_up_tab .form p span{
 	width: 16px;
@@ -155,4 +154,12 @@
 	height: 35px;
 	margin-right: 10px;
 }
-
+.false{
+    color: #d00000;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 0 0 0 20px;
+    margin: 8px 0 -9px 0;
+    display: block;
+    text-align: left;
+}

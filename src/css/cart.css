@@ -26,13 +26,12 @@
 }
 /*--------------------------------*/
 #header .header_right{
-	width: 565px;
+	width: 600px;
 	float: right;
 	overflow: hidden;
 }
 #header .header_right .header_nav{
 	float: right;
-	width: 487px;
 	height: 33px;
 	line-height: 33px;
 }

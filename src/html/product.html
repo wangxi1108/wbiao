@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <title>商品详情</title>
+<link rel="stylesheet" href="../css/easyzoom.css" />
 <link rel="stylesheet" href="../css/public.css">
 <link rel="stylesheet" href="../css/common.css">
 <link rel="stylesheet" href="../css/product.css">
-<link rel="stylesheet" href="..css/easyzoom.css" />
 <script src="../libs/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="../libs/template-native.js"></script>
-<script src="../js/index.js"></script>
+<script src="../libs/jquery.cookie.js"></script>
 <script src="../libs/easyzoom.js"></script>
 </head>
 <body>
@@ -43,34 +43,36 @@
                         <div class="show_left">
                             <div class="photo">
                                 <div class="goods_pic">
-                                    <div class="bshow easyzoom easyzoom--overlay easyzoom--with-thumbnails">
-                                        <a href="<%= product.商品图片[0]%>"><img src="<%= product.商品图片[0]%>"/></a>
+                                    <div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails">
+                                        <a href="<%= product.商品图片.大图[0]%>">
+                                            <img src="<%= product.商品图片.中图[0]%>"/>
+                                        </a>
                                     </div>
                                     <div class="simg">
                                         <ul class="thumbnails">
                                             <li>
-                                                <a href="<%= product.商品图片[0]%>" data-standard="<%= product.商品图片[0]%>">
-                                                    <img src="<%= product.商品图片[0]%>" alt="" />
+                                                <a href="<%= product.商品图片.大图[0]%>" data-standard="<%= product.商品图片.中图[0]%>">
+                                                    <img src="<%= product.商品图片.小图[0]%>" alt="" width="480" height="480"/>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<%= product.商品图片[1]%>" data-standard="<%= product.商品图片[1]%>">
-                                                    <img src="<%= product.商品图片[1]%>" alt="" />
+                                                <a href="<%= product.商品图片.大图[1]%>" data-standard="<%= product.商品图片.中图[1]%>">
+                                                    <img src="<%= product.商品图片.小图[1]%>" alt="" />
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<%= product.商品图片[2]%>" data-standard="<%= product.商品图片[2]%>">
-                                                    <img src="<%= product.商品图片[2]%>" alt="" />
+                                                <a href="<%= product.商品图片.大图[2]%>" data-standard="<%= product.商品图片.中图[2]%>">
+                                                    <img src="<%= product.商品图片.小图[2]%>" alt="" />
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<%= product.商品图片[3]%>" data-standard="<%= product.商品图片[3]%>">
-                                                    <img src="<%= product.商品图片[3]%>" alt="" />
+                                                <a href="<%= product.商品图片.大图[3]%>" data-standard="<%= product.商品图片.中图[3]%>">
+                                                    <img src="<%= product.商品图片.小图[3]%>" alt="" />
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<%= product.商品图片[4]%>" data-standard="<%= product.商品图片[4]%>">
-                                                    <img src="<%= product.商品图片[4]%>" alt="" />
+                                                <a href="<%= product.商品图片.大图[4]%>" data-standard="<%= product.商品图片.中图[4]%>">
+                                                    <img src="<%= product.商品图片.小图[4]%>" alt="" />
                                                 </a>
                                             </li>
                                         </ul>
@@ -606,17 +608,26 @@
                 $(".main_warp").append(html1);
         });
 	});
-    var $easyzoom = $('.easyzoom').easyZoom();
+// Instantiate EasyZoom instances
+    $(function () {
+        $(window).one("mouseenter", function(){
+        var $easyzoom = $('.easyzoom').easyZoom();
+        console.log($easyzoom)
+
+        // Setup thumbnails example
         var api1 = $easyzoom.filter('.easyzoom--with-thumbnails').data('easyZoom');
 
-    $('.thumbnails').on('click', 'a', function(e) {
+        $('.thumbnails').on('mouseenter', 'a', function(e) {
             var $this = $(this);
 
             e.preventDefault();
 
             // Use EasyZoom's `swap` method
             api1.swap($this.data('standard'), $this.attr('href'));
-    });
+        });
+        })
+
+    })
 
 </script>
 </body>

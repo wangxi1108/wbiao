@@ -284,7 +284,7 @@ $(function () {
 $(function () {
 	$(window).one("mouseenter", function(){
 	var oNav = $('#cebiannav');//导航壳
-		   var aNav = oNav.find('li');//导航
+		   var aNav = oNav.children('li');//导航
 		   var aDiv = $('#main .louceng');//楼层
 		   var oTop = $('#goTop');
 			//回到顶部
@@ -296,12 +296,12 @@ $(function () {
 				 	oNav.fadeIn();
 				 	oTop.fadeIn();
 				 //鼠标滑动式改变	
-				 aDiv.each(function(){
-				 	if(winH+iTop - $(this).offset().top>winH/2){
-				 		aNav.removeClass('active');
-				 		aNav.eq($(this).index()).addClass('active');
-				 	}
-				 })
+				 // aDiv.each(function(){
+				 // 	if(winH+iTop - $(this).offset().top > winH/2){
+				 // 		aNav.removeClass('active');
+				 // 		aNav.eq($(this).index()).addClass('active');
+				 // 	}
+				 // })
 				 }else{
 				 	oNav.fadeOut();
 				 	oTop.fadeOut();

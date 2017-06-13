@@ -16,8 +16,8 @@
 		<div class="header_nav">
 			<div class="header_nav_tab">
 				<ul>
-					<li><a href="log_in.html" target="_blank">登录</a></li>
-					<li><a href="sign_up.html" target="_blank">注册（即送50元）</a></li>
+					<li><a href="log_in.html"  id="dl">登录</a></li>
+					<li><a href="sign_up.html"  id="zc">注册（即送50元）</a></li>
 					<li><span>|</span><a href="">我的订单</a><span>|</span></li>
 					<li>
 						<a href="" class="block1">手机万表</a>
@@ -81,6 +81,17 @@
 		</div>
 	<!-- ******头部-logo与搜索区结束****** -->
 <script>
+		$(document).ready(function() {
+			$.cookie.json=true;
+
+	   		 var _dl= $.cookie("dl");
+	   		 console.log(_dl)
+	   		 if (_dl) {
+	   		 	$("#dl").html("").prop('href', '#');
+	   		 	$("#zc").html("欢迎"+_dl.id+"登录").prop('href', '#');
+	   		 }
+		});
+
 // 头部广告活动区轮播
 	$(function () {
 		var $imgs = $(".activity_link"),

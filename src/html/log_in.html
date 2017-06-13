@@ -7,6 +7,7 @@
 <link href="../css/public.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/log_in.css">
 <script src="../libs/jquery-1.12.4.min.js"></script>
+<script src="../libs/jquery.cookie.js"></script>
 </head>
 <body>
 	<!-- ******头部****** -->
@@ -24,10 +25,13 @@
 					<p>万表会员<a href="#"><span></span> 手机动态码登录</a></p>
 					<form action="">
 						<div class="user_login">
-							<p><span></span><input type="text" placeholder="手机号码/会员名/邮箱" class="txt"></p>
-							<p><span></span><input type="text" placeholder="密码" class="txt"></p>
-							<p><label><input type="checkbox"> 自动登录</label><label><input type="checkbox" checked> 记住账户名</label></p>
-							<p><input type="submit" value="立即登录"></p>
+							<p><span></span><input type="text" id="yonghuming" placeholder="手机号码/会员名/邮箱" class="txt">
+							<b id="shoujihao" class="false" style="display: none;"></b>
+							</p>
+							<p><span></span><input type="password" placeholder="密码" class="txt" id="mima">
+							<b id="mimayz" class="false" style="display: none;"></b></p>
+							<p><label><input type="checkbox" id="auto_dl"> 自动登录</label><label><input type="checkbox" id="rem"> 记住账户名</label></p>
+							<p><input type="button" value="立即登录" id="btn"></p>
 							<p><a href="">注册万表会员</a><span><a href="">忘记密码?</a></span></p>
 						</div>
 					</form>
@@ -81,6 +85,37 @@
 		$(function () {
 			$("#header .likely .header_logo").load("include/header.html");
 			$("#footer .likely").load("include/footer.html");
+		});
+
+   		 $.cookie.json=true;
+   		 var _users= $.cookie("users");
+		$("#yonghuming").blur(function(event) {
+			var _userr=$(this).val()
+			if (_userr===_users.id) {
+				$("#shoujihao").show().addClass('true').html("用户名可用")
+			}else {
+				$("#shoujihao").show().removeClass('true').html("用户手机号不存在")
+			}
+		});
+		$("#mima").blur(function(event) {
+			var _userr=$(this).val()
+			if (_userr===_users.password) {
+				$("#mimayz").show().addClass('true').html("密码正确")
+			}else {
+				$("#mimayz").show().removeClass('true').html("密码不正确")
+			}
+		});
+
+		$("#btn").click(function(event) {
+			if($(".true").length===2){
+				var dlid=$("#yonghuming").val();
+				var dluser = {
+					id : dlid,
+					};
+				$.cookie.json=true;
+				$.cookie("dl",dluser, {path:"/"});
+				location="http://127.0.0.1:8080/src/html/index.html"
+			}
 		});
 	</script>
 </body>

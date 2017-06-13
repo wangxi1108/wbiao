@@ -7,13 +7,11 @@
             "天梭T006.407.11.053.00 自动机械机芯男士表"
         ],
         "商品标签": "80小时动力储存",
-        "商品图片": [
-                "../img/main/T006_407_11_053_00_32703.jpg",
-                "../img/main/T006_407_11_053_00_65144.jpg",
-                "../img/main/T006_407_11_053_00_52695.jpg",
-                "../img/main/T006_407_11_053_00_52939",
-                "../img/main/T006_407_11_053_00_04593.jpg"
-            ],
+        "商品图片": {
+                "小图":["../img/main/pro_mini_1.jpg","../img/main/pro_mini_2.jpg","../img/main/pro_mini_3.jpg","../img/main/pro_mini_4.jpg","../img/main/pro_mini_5.jpg"],
+                "中图":["../img/main/pro_mid_1.jpg","../img/main/pro_mid_2.jpg","../img/main/pro_mid_3.jpg","../img/main/pro_mid_4.jpg","../img/main/pro_mid_5.jpg"],
+                "大图":["../img/main/pro_big_1.jpg","../img/main/pro_big_2.jpg","../img/main/pro_big_3.jpg","../img/main/pro_big_4.jpg","../img/main/pro_big_5.jpg"]
+            },
         "喜欢人数": "3",
         "商品标题": "【618限时赠送积优表带！】全新升级！！！天梭TISSOT-力洛克系列 T006.407.11.053.00 机械男表",
         "型号": "T006.407.11.053.00",

@@ -9,6 +9,7 @@
 <link href="../css/public.css" rel="stylesheet">
 <link href="../css/cart.css" rel="stylesheet">
 <script src="../libs/jquery-1.12.4.min.js"></script>
+<script src="../libs/jquery.cookie.js"></script>
 </head>
 </head>
 <body>
@@ -17,7 +18,7 @@
     	<div class="header_right">
 			<div class="header_nav">
 				<p>
-					<span><a href="">登录</a><a href="">注册</a></span>
+					<span><a href="log_in.html" id="dl">登录</a><a href="sign_up.html" id="zc">注册</a></span>
 					<i>|</i>
 					<span>全国客服电话：<b>400-883-2688</b></span>
 					<i>|</i>
@@ -44,11 +45,11 @@
 		<div class="cart">
 			<div class="nologcart">
 				<div class="carttitle">
-					<h2>购物车：</h2><span><a href="">现在登录</a>，购物车信息将一直为您保存</span>
+					<h2>购物车：</h2><span><a href="log_in.html">现在登录</a>，购物车信息将一直为您保存</span>
 				</div>
 				<div class="bxc">
 					<p>购物车空了，去挑选一款心仪的吧</p>
-					<p><a href="">返回首页挑选</a></p>
+					<p><a href="index.html">返回首页挑选</a></p>
 				</div>
 			</div>
 		</div>
@@ -58,6 +59,17 @@
     	<div class="likely"></div>
 	</div>
 	<script>
+		$(document).ready(function() {
+			$.cookie.json=true;
+
+	   		 var _dl= $.cookie("dl");
+	   		 console.log(_dl)
+	   		 if (_dl) {
+	   		 	$("#dl").html("您好！").prop('href', '#');
+	   		 	$("#zc").html("欢迎"+_dl.id+"登录").prop('href', '#');
+	   		 	$("#main .cart .carttitle span").hide();
+	   		 }
+		});
 		$(function () {
 			$("#header .likely .header_logo").load("include/header.html");
 			$("#footer .likely").load("include/footer.html");

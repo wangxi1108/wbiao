@@ -4,7 +4,7 @@
 	    <div class="main_nav">
 	    	<div class="products_link">
 	    		<a href="products.html" target="_blank">全部腕表</a>
-				<ul class="pinpai_nav">
+				<ul class="pinpai_nav" style="display: none;">
 					<li class="check">
 						<p class="pinpailei"><a href="">顶级品牌</a></p>
 						<p class="pin_pai">
@@ -475,7 +475,12 @@
 		});
 	})
 // 导航品牌区tab切换
-	$(function () {
+	$(function () { 
+	    $(".products_link").hover(function() {
+	        $(".pinpai_nav").show()
+	    }, function() {
+	        $(".pinpai_nav").hide()
+	    });
 		$(".check").hover(function() {
 			$(this).children('.bside').css('display', 'block');
 			$("#cttouch").css('display', 'block');

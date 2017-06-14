@@ -6,8 +6,8 @@
 <link rel="stylesheet" href="../css/public.css">
 <link rel="stylesheet" href="../css/common.css">
 <link rel="stylesheet" href="../css/products.css">
-<link href="../css/index.css" rel="stylesheet">
 <script src="../libs/jquery-1.12.4.min.js"></script>
+<script src="../libs/jquery.cookie.js"></script>
 <script type="text/javascript" src="../libs/template-native.js"></script>
 <script src="../js/index.js"></script>
 </head>
@@ -17,6 +17,234 @@
 <!-- ******主体****** -->
 	<div id="main">
 	    <div class="nav"></div>
+	    <div id="xqlb"></div>
+	</div>
+<script type=text/html id="products_art">
+ <% for(var i=0,len=list.length;i< len;i++){
+            var products=list[i];
+       %>
+
+			<div class="xq_top">
+				<div class="t_l"><a href=""><%=products.当前位置[0]%>></a><a href=""><a href=""><%=products.当前位置[1]%></a></div>
+				<div class="t_r">热门搜索: <a href=""><%=products.热门搜索[0]%></a><a href=""><%=products.热门搜索[1]%></a><a href=""><%=products.热门搜索[2]%></a></div>
+			</div>
+			<div class="xq_show">
+				<div class="xq_left">
+					<div class="lxxz">
+						<dl>
+							<dt class="l_tt">所有类别手表</dt>
+							<dd><%=products.类型选择.所有类别手表[0]%></dd>
+							<dd><%=products.类型选择.所有类别手表[1]%></dd>
+							<dd><%=products.类型选择.所有类别手表[2]%></dd>
+						</dl>
+						<dl>
+							<dt class="l_tt">场合</dt>
+							<dd><%=products.类型选择.场合[0]%></dd>
+							<dd><%=products.类型选择.场合[1]%></dd>
+							<dd><%=products.类型选择.场合[2]%></dd>
+							<dd><%=products.类型选择.场合[3]%></dd>
+							<dd><%=products.类型选择.场合[4]%></dd>
+						</dl>
+						<dl>
+							<dt class="l_tt">送礼</dt>
+							<dd><p>男表</p>
+								<a href=""><%=products.类型选择.送礼.男表[0]%></a>
+								<a href=""><%=products.类型选择.送礼.男表[1]%></a>
+								<a href=""><%=products.类型选择.送礼.男表[2]%></a>
+								<a href=""><%=products.类型选择.送礼.男表[3]%></a>
+								<a href=""><%=products.类型选择.送礼.男表[4]%></a>
+							</dd>
+							<dd><p>女表</p>
+								<a href=""><%=products.类型选择.送礼.女表[0]%></a>
+								<a href=""><%=products.类型选择.送礼.女表[1]%></a>
+								<a href=""><%=products.类型选择.送礼.女表[2]%></a>
+								<a href=""><%=products.类型选择.送礼.女表[3]%></a>
+							</dd>
+							<dd><p>情侣表</p>
+								<a href=""><%=products.类型选择.送礼.情侣表[0]%></a>
+								<a href=""><%=products.类型选择.送礼.情侣表[1]%></a>
+								<a href=""><%=products.类型选择.送礼.情侣表[2]%></a>
+								<a href=""><%=products.类型选择.送礼.情侣表[3]%></a>
+								<a href=""><%=products.类型选择.送礼.情侣表[4]%></a></dd>
+						</dl>
+					</div>
+					<div class="l_banner">
+						<a href=""><img src="<%=products.侧边广告[0]%>" alt=""></a>
+						<a href=""><img src="<%=products.侧边广告[1]%>" alt=""></a>
+					</div>
+					<div class="yxtj">
+						<p class="rx_tt">热销推荐</p>
+						<ul>
+							<li><a href=""><img src="<%=products.热销推荐.图片[0]%>" alt="">
+									<p><%=products.热销推荐.产品[0]%></p>
+									<p><b><%=products.热销推荐.价格[0]%></b><span>已售<%=products.热销推荐.已售[0]%></span></p>
+							</a></li>
+							<li><a href=""><img src="<%=products.热销推荐.图片[1]%>" alt="">
+									<p><%=products.热销推荐.产品[1]%></p>
+									<p><b><%=products.热销推荐.价格[1]%></b><span>已售<%=products.热销推荐.已售[1]%></span></p>
+							</a></li>
+							<li><a href=""><img src="<%=products.热销推荐.图片[2]%>" alt="">
+									<p><%=products.热销推荐.产品[2]%></p>
+									<p><b><%=products.热销推荐.价格[2]%></b><span>已售<%=products.热销推荐.已售[2]%></span></p>
+							</a></li>
+							<li><a href=""><img src="<%=products.热销推荐.图片[3]%>" alt="">
+									<p><%=products.热销推荐.产品[3]%></p>
+									<p><b><%=products.热销推荐.价格[3]%></b><span>已售<%=products.热销推荐.已售[3]%></span></p>
+							</a></li>
+							<li><a href=""><img src="<%=products.热销推荐.图片[4]%>" alt="">
+									<p><%=products.热销推荐.产品[4]%></p>
+									<p><b><%=products.热销推荐.价格[4]%></b><span>已售<%=products.热销推荐.已售[4]%></span></p>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="xq_right">
+					<div class="cpfl">
+						<p class="cpfl_sl">已找到<%=products.产品分类.产品总量%>件</p>
+						<div class="pp">
+							<div class="tt">品牌</div>
+							<div class="txt">
+							<p>[顶级] 
+								<span>
+									<a href=""><%=products.产品分类.品牌.顶级[0]%></a>
+									<a href=""><%=products.产品分类.品牌.顶级[1]%></a>
+									<a href=""><%=products.产品分类.品牌.顶级[2]%></a>
+									<a href=""><%=products.产品分类.品牌.顶级[3]%></a>
+									<a href=""><%=products.产品分类.品牌.顶级[4]%></a>
+									<a href=""><%=products.产品分类.品牌.顶级[5]%></a>
+									<a href=""><%=products.产品分类.品牌.顶级[6]%></a>
+								</span>
+							</p>
+							<p>[奢华] 
+								<span>
+									<a href=""><%=products.产品分类.品牌.奢华[0]%></a>
+									<a href=""><%=products.产品分类.品牌.奢华[1]%></a>
+									<a href=""><%=products.产品分类.品牌.奢华[2]%></a>
+									<a href=""><%=products.产品分类.品牌.奢华[3]%></a>
+									<a href=""><%=products.产品分类.品牌.奢华[4]%></a>
+									<a href=""><%=products.产品分类.品牌.奢华[5]%></a>
+									<a href=""><%=products.产品分类.品牌.奢华[6]%></a>
+								</span>
+							</p>
+							<p>[轻奢] 
+								<span>
+									<a href=""><%=products.产品分类.品牌.轻奢[0]%></a>
+									<a href=""><%=products.产品分类.品牌.轻奢[1]%></a>
+									<a href=""><%=products.产品分类.品牌.轻奢[2]%></a>
+									<a href=""><%=products.产品分类.品牌.轻奢[3]%></a>
+									<a href=""><%=products.产品分类.品牌.轻奢[4]%></a>
+									<a href=""><%=products.产品分类.品牌.轻奢[5]%></a>
+									<a href=""><%=products.产品分类.品牌.轻奢[6]%></a>
+								</span>
+							</p>
+							<p>[顶级] 
+								<span>
+									<a href=""><%=products.产品分类.品牌.顶级[0]%></a>
+									<a href=""><%=products.产品分类.品牌.顶级[1]%></a>
+									<a href=""><%=products.产品分类.品牌.顶级[2]%></a>
+									<a href=""><%=products.产品分类.品牌.顶级[3]%></a>
+									<a href=""><%=products.产品分类.品牌.顶级[4]%></a>
+									<a href=""><%=products.产品分类.品牌.顶级[5]%></a>
+									<a href=""><%=products.产品分类.品牌.顶级[6]%></a>
+								</span>
+							</p>
+							</div>
+						</div>
+						<div class="pp">
+							<div class="tt">人群</div>
+							<div class="txt">
+							<p>
+								<a href=""><%=products.产品分类.人群[0]%></a>
+								<a href=""><%=products.产品分类.人群[1]%></a>
+								<a href=""><%=products.产品分类.人群[2]%></a>
+								<a href=""><%=products.产品分类.人群[3]%></a>
+							</p>
+							</div>
+						</div>
+						<div class="pp">
+							<div class="tt">价格</div>
+							<div class="txt">
+							<p>
+								<a href=""><%=products.产品分类.价格[0]%></a>
+								<a href=""><%=products.产品分类.价格[1]%></a>
+								<a href=""><%=products.产品分类.价格[2]%></a>
+								<a href=""><%=products.产品分类.价格[3]%></a>
+								<a href=""><%=products.产品分类.价格[4]%></a>
+								<a href=""><%=products.产品分类.价格[5]%></a>
+								<a href=""><%=products.产品分类.价格[6]%></a>
+								<a href=""><%=products.产品分类.价格[7]%></a>
+							</p>
+							</div>
+						</div>
+						<div class="pp">
+							<div class="tt">机芯</div>
+							<div class="txt">
+							<p>
+								<a href=""><%=products.产品分类.机芯[0]%></a>
+								<a href=""><%=products.产品分类.机芯[1]%></a>
+								<a href=""><%=products.产品分类.机芯[2]%></a>
+								<a href=""><%=products.产品分类.机芯[3]%></a>
+								<a href=""><%=products.产品分类.机芯[4]%></a>
+								<a href=""><%=products.产品分类.机芯[5]%></a>
+								<a href=""><%=products.产品分类.机芯[6]%></a>
+								<a href=""><%=products.产品分类.机芯[7]%></a>
+								<a href=""><%=products.产品分类.机芯[8]%></a>
+							</p>
+							</div>
+						</div>
+					</div>
+					<div><img src="" alt=""></div>
+						<div class="sp">
+							<div class="sp_top"></div>
+							<div class="sp_show">
+								<ul>
+									<li>
+										<a href="">
+											<img src="<%=products.商品栏[0].图片%>" alt="">
+											<p><%=products.商品栏[0].品名%></p>
+											<p>
+												<b><%=products.商品栏[0].价格%></b>
+												<%=products.商品栏[0].折扣%>
+												<span><%=products.商品栏[0].销量%></span></p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="<%=products.商品栏[0].图片%>" alt="">
+											<p><%=products.商品栏[0].品名%></p>
+											<p>
+												<b><%=products.商品栏[0].价格%></b>
+												<%=products.商品栏[0].折扣%>
+												<span><%=products.商品栏[0].销量%></span></p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="<%=products.商品栏[0].图片%>" alt="">
+											<p><%=products.商品栏[0].品名%></p>
+											<p>
+												<b><%=products.商品栏[0].价格%></b>
+												<%=products.商品栏[0].折扣%>
+												<span><%=products.商品栏[0].销量%></span></p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="<%=products.商品栏[0].图片%>" alt="">
+											<p><%=products.商品栏[0].品名%></p>
+											<p>
+												<b><%=products.商品栏[0].价格%></b>
+												<%=products.商品栏[0].折扣%>
+												<span><%=products.商品栏[0].销量%></span></p>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+				</div>
+			</div>
+<%}%>
+</script>
 <!-- ******底部****** -->
     <div id="footer"></div>
 <script>
@@ -25,6 +253,15 @@
 		$("#main .nav").load("include/nav.html");
 		$("#footer").load("include/index-footer.html");
 	});
+	$.getJSON('../data/products.json',function(responseData) {
+                var data = {
+                    list : responseData
+                };
+                  console.log(data);
+                var html = template("products_art",data);
+                $("#xqlb").append(html);
+    });
+
 </script>
 </body>
 </html>

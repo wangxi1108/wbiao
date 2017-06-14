@@ -279,6 +279,8 @@
 }
 #goods .goods_show .goods_msg .msg_part4 .kuanshi_pic a img {
   height: 48px;
+  display: block;
+  float: left;
 }
 #goods .goods_show .goods_msg #quantity {
   margin-top: 30px;
@@ -624,6 +626,7 @@
 }
 .thumbnails li {
   float: left;
+  margin-right: 20px!important;
 }
 .thumbnails li a {
   display: block;
@@ -635,4 +638,42 @@
 .thumbnails li a img {
   width: 100%;
   height: 100%;
+}
+.thumbnails li:hover {
+  border: 1px solid red!important;
+}
+.tips_new {
+  width: 100%;
+  height: auto;
+}
+.tips_new li {
+  float: left;
+  margin-top: 70px;
+  overflow: hidden;
+  width: 25%;
+}
+.clean {
+  clear: both;
+}
+.xiangqingtupian img {
+  margin: 0 auto!important;
+  display: block;
+}
+.hot_recommend {
+  margin-top: 50px;
+}
+.hot_recommend .recom_titles {
+  text-align: center;
+}
+.hot_recommend .line {
+  text-align: center;
+  margin: 20px 0;
+}
+.hot_recommend .line h6 {
+  display: inline-block;
+}
+.recom_goods li {
+  float: left;
+  width: 192px;
+  overflow: hidden;
 }

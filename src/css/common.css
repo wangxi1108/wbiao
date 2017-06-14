@@ -81,7 +81,7 @@
 	width: 100px
 }
 #header .header_nav .header_nav_tab ul li:nth-child(3) a {
-	padding: 0 19px
+	padding: 0 17px
 }
 #header .header_nav .header_nav_tab ul li:nth-child(3) span {
 	font-size: 13px;
@@ -708,7 +708,7 @@
 }
 #footer .footer_help .footer_wrap .part_code_3 {
 	display: inline-block;
-	width: 208px;
+	width: 205px;
 	margin-top: -10px;
 	border-left: 1px solid #ddd
 }

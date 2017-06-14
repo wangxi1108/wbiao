@@ -226,4 +226,94 @@
 	height: 35px;
 	margin-right: 10px;
 }
+#goodscart{
+	background-color: #ebeae9;
+	width: 100%;
+	height: auto;
+    padding: 0 8px;
+    // display: none;
+}
+#list_t{
+	height: 44px;
+	border-bottom: 1px dotted;
+}
+#list_t .sp{
+	float: left;
+	width: 53%;
+	padding: 8px 0 6px;
+	height: 30px;
+	line-height: 30px;
+	text-align: left;
 
+}
+#list_t ul{
+	width: 47%;
+	float: left;
+}
+#list_t ul li{
+	float: left;
+	padding: 8px 0 6px;
+	height: 30px;
+	line-height: 30px;
+	width: 25%;
+}
+.sp_list{
+	float: left;
+	width: 53%;
+	padding: 8px 0 6px; 
+}
+.sp_list .sp_left{
+	float: left;
+}
+.sp_list .sp_left input{
+	display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    background-color: #fff;
+    position: relative;
+}
+.sp_list img{
+	width: 100px;
+	height: 100px;
+}
+.list_txt{
+    color: #000;
+    line-height: 24px;
+    text-align: left;
+    padding: 20px 30px;
+}
+.list_txt span{
+	display: block;
+}
+#template{
+	width: 100%;
+	height: 120px;
+	line-height: 120px;
+	display: none;
+}
+#template ul{
+	width: 47%;
+	float: left;
+}
+#template ul li{
+	width: 25%;
+	float: left;
+	line-height: 120px;
+	text-align: center!important;
+}
+#template ul li a{
+	float: left;
+}
+#template ul li input{
+	float: left;
+	vertical-align: middle;
+	width: 50px;
+	margin: 50px 0;
+}
+#no{
+	display: none;
+}

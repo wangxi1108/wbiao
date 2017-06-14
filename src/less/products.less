@@ -14,6 +14,12 @@
     	float: right;
     }
 }
+#main {
+  background: url(../img/main/main-bg.png) repeat-x 0 42px;
+}
+a{
+	color: #666;
+}
 .xq_show{
 	width: 1200px;
 	margin: 0 auto;
@@ -31,14 +37,31 @@
     		dl{
     			margin-bottom: 20px;
     			dd{
-    				padding-left: 20px;
+    				padding:2px 20px;
+    				font-size:12px;
+    				p{
+    					font-weight: bold;
+    					padding: 6px 0;
+    				}
+    				a{
+    					display: inline-block;
+    					padding: 2px;
+    					margin-right:12px;
+
+    				}
+    				
     			}
     		}
     		.l_tt{
-    			border-bottom: 1px solid;
     			font-weight: bold;
-    			font-size: 15px;
     			margin-bottom: 10px;
+    			font-size: 14px;
+			    height: 24px;
+			    line-height: 24px;
+			    background-color: #f7f7f7;
+			    border-bottom: 1px solid #dcdcdc;
+			    padding: 0 8px;
+			    position: relative;
     		}
 	    }
 	    .l_banner{
@@ -46,10 +69,11 @@
 		    height: auto;
 		    overflow: hidden;
 		    position: relative;
+		    margin-bottom: 50px;
 		    a{
 		    	display: block;
 		    	width: 210px;
-		    	height: 400px;
+		    	height: 350px;
 		    }
 	    }
 	    .yxtj{
@@ -63,19 +87,23 @@
     		}
     		li{
     			width: 100%;
+    			border-bottom: 1px dashed #ccc;
     			a{
     				display: block;
+    				margin: 20px 0;
     				img{
     					width: 140px;
     					height: 95px;
     					display: block;
-    					margin: 10px auto;
+    					padding: 0 10px;
+    					margin: 0 auto;
+    					display: block;
     				}
     				p{
     					text-align: left;
-					    margin: 12px auto 8px auto;
-					    height: 36px;
-					    overflow: hidden;
+    					padding: 0 10px;
+					    margin: 12px auto 8px;
+					    text-overflow: ellipsis;
 					    b{
 					    	font-size: 14px;
     						color: #b01330;
@@ -94,6 +122,7 @@
 	.xq_right{
 		width: 970px;
 		float: right;
+		font-size: 12px;
 		.cpfl{
 			border: 1px solid #cdcdcd;
 		    padding: 1px;
@@ -110,7 +139,7 @@
 		    background-color: #f7f7f7;
 			}
 			.pp{
-				padding: 7px 12px;
+				padding: 13px 12px;
 			    line-height: 18px;
 			    position: relative;
 			    border-top: 1px dotted #dcdcdc;
@@ -129,8 +158,18 @@
 			    .txt{
 			    	padding-left: 60px;
     				position: relative;
+    				a{
+    					margin-right: 30px;
+    				}
+    				b{
+    					font-weight: 100;
+    					margin-right: 15px;
+    				}
 			    }
 			}
+		}
+		.r_banner{
+			margin: 50px 0;
 		}
 		.sp{
 			width: 100%;
@@ -146,8 +185,21 @@
 				    width: 230px!important;
 				    height: 395px;
 				    border: 3px solid #fff;
-				    margin-top: 20px;
 				    float: left;
+				    img{
+				    	margin-bottom: 10px;
+				    }
+				    .price{
+				    	color: red;
+				    	font-weight: bold;
+				    	b{
+				    		color: #666!important;
+				    	}
+				    	span{
+				    		font-weight: 100;
+				    		float: right;
+				    	}
+				    }
 				    p{
 				    	padding-bottom: 20px;
 					    margin: 0 12px;

@@ -1,6 +1,3 @@
-.pinpai_nav {
-  display: none!important;
-}
 .xq_top {
   width: 1200px;
   margin: 0 auto;
@@ -16,6 +13,12 @@
 }
 .xq_top .t_r {
   float: right;
+}
+#main {
+  background: url(../img/main/main-bg.png) repeat-x 0 42px;
+}
+a {
+  color: #666;
 }
 .xq_show {
   width: 1200px;
@@ -38,24 +41,40 @@
   margin-bottom: 20px;
 }
 .xq_show .xq_left .lxxz dl dd {
-  padding-left: 20px;
+  padding: 2px 20px;
+  font-size: 12px;
+}
+.xq_show .xq_left .lxxz dl dd p {
+  font-weight: bold;
+  padding: 6px 0;
+}
+.xq_show .xq_left .lxxz dl dd a {
+  display: inline-block;
+  padding: 2px;
+  margin-right: 12px;
 }
 .xq_show .xq_left .lxxz .l_tt {
-  border-bottom: 1px solid;
   font-weight: bold;
-  font-size: 15px;
   margin-bottom: 10px;
+  font-size: 14px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 0 8px;
+  position: relative;
 }
 .xq_show .xq_left .l_banner {
   width: 100%;
   height: auto;
   overflow: hidden;
   position: relative;
+  margin-bottom: 50px;
 }
 .xq_show .xq_left .l_banner a {
   display: block;
   width: 210px;
-  height: 400px;
+  height: 350px;
 }
 .xq_show .xq_left .yxtj {
   width: 100%;
@@ -69,21 +88,24 @@
 }
 .xq_show .xq_left .yxtj li {
   width: 100%;
+  border-bottom: 1px dashed #ccc;
 }
 .xq_show .xq_left .yxtj li a {
   display: block;
+  margin: 20px 0;
 }
 .xq_show .xq_left .yxtj li a img {
   width: 140px;
   height: 95px;
+  padding: 0 10px;
+  margin: 0 auto;
   display: block;
-  margin: 10px auto;
 }
 .xq_show .xq_left .yxtj li a p {
   text-align: left;
-  margin: 12px auto 8px auto;
-  height: 36px;
-  overflow: hidden;
+  padding: 0 10px;
+  margin: 12px auto 8px;
+  text-overflow: ellipsis;
 }
 .xq_show .xq_left .yxtj li a p b {
   font-size: 14px;
@@ -98,6 +120,7 @@
 .xq_show .xq_right {
   width: 970px;
   float: right;
+  font-size: 12px;
 }
 .xq_show .xq_right .cpfl {
   border: 1px solid #cdcdcd;
@@ -116,7 +139,7 @@
   background-color: #f7f7f7;
 }
 .xq_show .xq_right .cpfl .pp {
-  padding: 7px 12px;
+  padding: 13px 12px;
   line-height: 18px;
   position: relative;
   border-top: 1px dotted #dcdcdc;
@@ -137,6 +160,16 @@
   padding-left: 60px;
   position: relative;
 }
+.xq_show .xq_right .cpfl .pp .txt a {
+  margin-right: 30px;
+}
+.xq_show .xq_right .cpfl .pp .txt b {
+  font-weight: 100;
+  margin-right: 15px;
+}
+.xq_show .xq_right .r_banner {
+  margin: 50px 0;
+}
 .xq_show .xq_right .sp {
   width: 100%;
 }
@@ -153,8 +186,21 @@
   width: 230px!important;
   height: 395px;
   border: 3px solid #fff;
-  margin-top: 20px;
   float: left;
+}
+.xq_show .xq_right .sp .sp_show li img {
+  margin-bottom: 10px;
+}
+.xq_show .xq_right .sp .sp_show li .price {
+  color: red;
+  font-weight: bold;
+}
+.xq_show .xq_right .sp .sp_show li .price b {
+  color: #666!important;
+}
+.xq_show .xq_right .sp .sp_show li .price span {
+  font-weight: 100;
+  float: right;
 }
 .xq_show .xq_right .sp .sp_show li p {
   padding-bottom: 20px;

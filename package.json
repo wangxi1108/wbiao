@@ -1,22 +1,8 @@
-
-  "name": "project",
+{
+  "name": "wbiao",
   "version": "1.0.0",
-  "description": "dir:\r     node_modules",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "art-template": "^4.10.1",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.4.1",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-less": "^3.3.0",
-    "gulp-livereload": "^3.8.1",
-    "gulp-uglify": "^3.0.0",
-    "gulp-watch": "^4.3.11",
-    "jquery": "^3.2.1",
-    "jquery.cookie": "^1.4.1"
-  },
+  "description": "- git √\r - github √\r - npm √\r - cnpm √\r - require.js\r - gulp √\r - less √\r - jQuery √\r #### 步骤：\r ##### 项目创建",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/OrangeBorning/wbiao/issues"
   },
-  "homepage": "https://github.com/OrangeBorning/wbiao#readme"
+  "homepage": "https://github.com/OrangeBorning/wbiao#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.4.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-less": "^3.3.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11"
+  }
 }

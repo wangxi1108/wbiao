@@ -289,26 +289,26 @@
 .list_txt span{
 	display: block;
 }
-#template{
+.template{
 	width: 100%;
 	height: 120px;
 	line-height: 120px;
 	display: none;
 }
-#template ul{
+.body ul{
 	width: 47%;
 	float: left;
 }
-#template ul li{
+.body ul li{
 	width: 25%;
 	float: left;
 	line-height: 120px;
 	text-align: center!important;
 }
-#template ul li a{
+.body ul li a{
 	float: left;
 }
-#template ul li input{
+.body ul li input{
 	float: left;
 	vertical-align: middle;
 	width: 50px;

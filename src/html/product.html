@@ -100,7 +100,7 @@
                                 </dl>
                                 <dl>
                                     <dt>编号:</dt>
-                                    <dd><%= product.编号%></dd>
+                                    <dd id="id"><%= product.编号%></dd>
                                 </dl>
                                 <dl>
                                     <dt>品牌:</dt>
@@ -114,7 +114,7 @@
                             <div class="msg_part1">
                                 <div class="price_title">万表价</div>
                                 <div id="price">
-                                    ￥<b><%= product.价格.万表价%></b>
+                                    ￥<b id="jage"><%= product.价格.万表价%></b>
                                 </div>
                                 <div id="market_price">
                                     <del><%= product.价格.市场价%></del>
@@ -167,9 +167,9 @@
                             <div id="quantity">
                                 <div class="shuliang">数量</div>
                                 <div class="updown">
-                                    <span class="minus">-</span>
+                                    <span class="minus"><a href="javascript:void(0)">-</a></span>
                                     <input type="text" value="1" maxlength="4" class="num" name="goods_number">
-                                    <span class="add">+</span>
+                                    <span class="add"><a href="javascript:void(0)">+</a></span>
                                 </div>
                                 <div class="sale_out">
                                     有现货，已售&nbsp;<i class="red"><%= product.已售%></i>
@@ -178,8 +178,8 @@
                             </div>
                             <div class="clear"></div>
                             <div class="goumai">
-                                <a href="" id="ljgoumai">立即购买</a>
-                                <div id="jrcart">加入购物车</div>
+                                <a href="javascript:void(0)" id="ljgoumai">立即购买</a>
+                                <div id="jrcart"><a href="javascript:void(0)">加入购物车</a></div>
                             </div>
                             <div class="phone_pay">
                                 <img src="../img/main/phone_zx.png" alt="">
@@ -635,6 +635,48 @@
         });
         })
 
+    })
+
+
+
+$(function () {
+    $(window).one("mouseenter", function(){
+    $("#jrcart").click(function () {//点击添加购物车按钮，获取所在行信息
+
+                var $row = $(this).parents(".goods_msg");//点击的a标签获取其父元素的父元素-----parents
+                
+                /*暂存在名为row的变量中
+                创建一个产品对象，有序号id名称name，单价price以及数量amount*/
+                var good = {
+                    id:$("#id").text(),
+                    name:$row.children(".prod_name").text(),
+                    price:$("#jage").text(),
+                    amount:$(".num").eq(0).val(),
+                    img:$(".thumbnails li:eq(0) img").prop("src")
+                };
+                 $("#shopingcar p").text(good.amount);
+                //配置，自动在对象与与字符串间解析转换
+                $.cookie.json = true;
+                //判断是否已选购当前商品
+                var _goods = $.cookie("goods") || [];
+                var _index = indexOf(good.id, goods);
+                if (_index ===-1){
+                    _goods.push(good);
+                }else {
+                    _goods[_index].amount++;
+                }
+                $.cookie("goods",_goods,{expires:7});
+                console.log($.cookie("goods"));
+            });
+            function indexOf (id,goods) {
+                for(var i=0,len=goods.length;i<len;i++){
+                    if (id===goods[i].id) {
+                        return i;
+                    }
+                }
+                return -1;
+            };
+        })
     })
 
 </script>
